@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dripar Gupta - Resume</title>
+ 
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333333;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 20px;
+
+
+        }
+
+        .section {
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .print-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            line-height: 1;
+            cursor: pointer;
+            margin-top: 10px;
+            float: right;
+        }
+
+        .print-icon {
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 5px;
+
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #dddddd;
+        }
+
+
+        .profile-image {
+            display: block;
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            float: right;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById("print");
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: "dripar-resume.pdf",
+                image: { type: "jpeg", quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+            };
+
+            html2pdf()
+                .set(opt)
+                .from(element)
+                .save();
+        }
+    </script>
+
+
+
+    <script>
+
+        function getCurrentDate() {
+            const currentDate = new Date();
+            const formattedDate = currentDate.toDateString();
+            return formattedDate;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <button onclick="downloadPDF()">Print PDF</button> -->
+    <button class="print-btn" onclick="downloadPDF()"><span class="print-icon">&#128438;</span>Print PDF</button>
+
+    <div id="print">
+
+        <div class="section">
+            <img class="profile-image"
+                src="https://media.licdn.com/dms/image/D4D03AQGZeW4fSTU98A/profile-displayphoto-shrink_800_800/0/1676737320960?e=1700697600&v=beta&t=cZmTIJ6qvmdX4QSAsERs8lXMtnK0K48mNgF866iTTZg"
+                alt="Profile Image">
+
+            <h1>Dripar Gupta</h1>
+            <p>Address: D-170A, D Block, Sector 50, Noida, Uttar Pradesh 201301</p>
+            <p>Contact No.: 8756653868</p>
+            <p>Email: gd875665@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/dripar-g-6119631b5/">LinkedIn Profile</a></p>
+            <!-- <p>GitHub: <a href="#">GitHub Profile</a></p> -->
+            
+        </div>
+
+        <div class="section">
+            <h2>CAREER OBJECTIVE</h2>
+            <p>
+                To take up a challenging career and grow with honesty, loyalty, good relationships, and exceptional
+                performance. I aim to utilize my experience, knowledge, skills, and abilities to create value for an
+                organization. I possess strong teamwork skills and a creative and determined approach to work.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>EDUCATION</h2>
+            <table>
+                <tr>
+                    <th>Degree/Certificate</th>
+                    <th>Board/University</th>
+                    <th>Year</th>
+                    <th>Percentage</th>
+                </tr>
+                <tr>
+                    <td>Secondary</td>
+                    <td>UP Board</td>
+                    <td>2015</td>
+                    <td>72.5%</td>
+                </tr>
+                <tr>
+                    <td>Senior Secondary</td>
+                    <td>UP Board</td>
+                    <td>2017</td>
+                    <td>70%</td>
+                </tr>
+                <tr>
+                    <td>Graduation</td>
+                    <td>State University</td>
+                    <td>2020</td>
+                    <td>52%</td>
+                </tr>
+                <tr>
+                    <td>PGDCA</td>
+                    <td>Subharti University</td>
+                    <td>2021</td>
+                    <td>65%</td>
+                </tr>
+                <tr>
+                    <td>MCA</td>
+                    <td>Mangalayatan University (2<sup>nd</sup> year)</td>
+                    <td>2023</td>
+                    <td>Pursuing</td>
+                </tr>
+            </table>
+        </div>
+
+       
+        <div class="section">
+            <h2>TECHNICAL SKILLS</h2>
+            <ul>
+                <li><strong>Programming Languages</strong>: C, JavaScript, PHP, Laravel, Python</li>
+                <li><strong>Web Development</strong>: HTML, HTML5, CSS, W3CSS, Bootstrap, AJAX, JSON</li>
+                <li><strong>Database Management</strong>: MySQL, Data Structures</li>
+                <li><strong>API Integration</strong>: Google Sign-In, Apple Sign-In, Calendly</li>
+                <li><strong>Version Control</strong>: GitHub</li>
+                <li><strong>Software Proficiency</strong>: MS Word, Excel, PowerPoint, MS Access, Internet, Paint, etc.</li>
+                <li><strong>Web Frameworks</strong>: Laravel- MVC (Model-View-Controller) , Django -MVT (Model View Template)  </li>
+                <li><strong>Server Management</strong>: CPanel, CWP (Control Web Panel), Hostinger</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>PROJECT WORK</h2>
+            <ul>
+                <li>
+                    <strong>Collage Management (Student Data)</strong> web application in PHP:
+                    
+                </li>
+                <li>
+                    <strong>Login Model (PHP)</strong>:
+                    
+                    Implemented a login system in PHP with support for multiple login models.
+                </li>
+                <li><strong>Parent-Teacher Communication and Activity Tracker</strong></li>
+                <li><strong>Doctor-Patient Communication Tool</strong></li>
+                <li>
+                    <strong>Kanram Academy</strong>: Developed a web application using Laravel for managing student data and blog posts. Implemented a blog section in the admin dashboard for easy content management.
+                </li>
+                <li>
+                    <strong>SeedTree Admin Dashboard</strong>: Created and currently maintaining an admin dashboard using Laravel, facilitating efficient project management and data handling.
+                </li>
+            </ul>
+        </div>
+        
+
+
+
+
+        <div class="section">
+            <h2>EXPERIENCE</h2>
+            <ul>
+                <li>
+                    <strong>Company Name</strong>: locgfx
+                    <br>
+                    <strong>Position Held</strong>: Backend Developer
+                    <br>
+                    <strong>Duration</strong>: 28-September-2022 to Currently Working
+                    <br>
+                    <strong>Project Involvement and Accomplishments</strong>:
+                    <ul>
+                        <li>
+                            Below are details of the projects I have worked on:
+                            <ol>
+                                <li>In the first project, I developed the API for the app and an admin dashboard with
+                                    multiple login and full control over the app's data. This project included features
+                                    like messaging for chat, posting, and sending messages. You can learn more about it
+                                    at: <a href="https://kidseau.com">https://kidseau.com</a></li>
+                                <li>In the second project, I collaborated with a team to develop a video call and
+                                    appointment booking system for doctors and patients. I added various features and
+                                    you can find more information at: <a
+                                        href="http://www.theataraxis.com/">http://www.theataraxis.com/</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Add more work experience entries following the same format -->
+            </ul>
+        </div>
+
+
+
+        <div class="section">
+            <h2>PERSONAL PROFILE</h2>
+            <ul>
+                <li><strong>Name</strong>: Dripar Gupta</li>
+                <li><strong>Father's Name</strong>: Shiv Kumar Gupta</li>
+                <li><strong>Date of Birth</strong>: 20-April-2000</li>
+                <li><strong>Gender</strong>: Male</li>
+                <li><strong>Permanent Address</strong>: Sikaro Koraon, Allahabad (Prayagraj), Uttar Pradesh 212306</li>
+                <li><strong>Nationality</strong>: Indian</li>
+                <li><strong>Marital Status</strong>: Unmarried</li>
+                <li><strong>Hobbies</strong>: Coding, Language Learning, Traveling, Listening to Songs</li>
+            </ul>
+        </div>
+
+
+
+        <div class="section">
+            <h2>DECLARATION</h2>
+            <p>
+                I hereby declare that the statements made in this document are true to the best of my knowledge and
+                belief.
+            </p>
+            <p>Date:
+                <!-- <script>document.write(getCurrentDate())</script> --> ........
+            </p>
+            <p>Signature: <stamp>(Dripar Gupta)</stamp>
+            </p>
+            <p>Place: Prayagraj (Allahabad)</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
