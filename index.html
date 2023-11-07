@@ -2,8 +2,12 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dripar Gupta - Resume</title>
- 
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.ico" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <style>
         body {
@@ -96,6 +100,20 @@
                 overflow-x: auto;
             }
         }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .section {
+                padding: 10px;
+                margin: 0;
+            }
+          
+            table {
+                font-size: 12px;
+            }
+        }
+        
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -136,7 +154,7 @@
     <div id="print">
 
         <div class="section">
-            <img class="profile-image"
+            <img class="profile-image" 
                 src="https://media.licdn.com/dms/image/D4D03AQGZeW4fSTU98A/profile-displayphoto-shrink_800_800/0/1676737320960?e=1700697600&v=beta&t=cZmTIJ6qvmdX4QSAsERs8lXMtnK0K48mNgF866iTTZg"
                 alt="Profile Image">
 
@@ -215,6 +233,31 @@
             </ul>
         </div>
 
+
+        <div class="section">
+            <h2>Normal task</h2>
+            <ul>
+                <li>
+                    <strong>Collage Management (Student Data)</strong> web application in PHP:
+                    
+                </li>
+                <li>
+                    <strong>Login Model (PHP)</strong>:
+                    
+                    Implemented a login system in PHP with support for multiple login models.
+                </li>
+                <li><strong>Parent-Teacher Communication and Activity Tracker</strong></li>
+                <li><strong>Doctor-Patient Communication Tool</strong></li>
+                <li>
+                    <strong>Kanram Academy</strong>: Developed a web application using Laravel for managing student data and blog posts. Implemented a blog section in the admin dashboard for easy content management.
+                </li>
+                <li>
+                    <strong>SeedTree Admin Dashboard</strong>: Created and currently maintaining an admin dashboard using Laravel, facilitating efficient project management and data handling.
+                </li>
+            </ul>
+        </div>
+
+
         <div class="section">
             <h2>PROJECT WORK</h2>
             <ul>
@@ -246,7 +289,7 @@
             <h2>EXPERIENCE</h2>
             <ul>
                 <li>
-                    <strong>Company Name</strong>: locgfx
+                    <strong>Company Name</strong>:LOCGFX PRIVATE LIMITED
                     <br>
                     <strong>Position Held</strong>: Backend Developer
                     <br>
@@ -298,7 +341,7 @@
                 belief.
             </p>
             <p>Date:
-                <!-- <script>document.write(getCurrentDate())</script> --> ........
+                <script>document.write(getCurrentDate())</script> 
             </p>
             <p>Signature: <stamp>(Dripar Gupta)</stamp>
             </p>
