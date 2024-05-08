@@ -151,18 +151,16 @@
     </button>
     <div id="print">
       <div class="section">
-    
         <img
-        class="profile-image"
-        src="assets/img/image.jpeg"
-        alt="Profile Image"
-      />
+          class="profile-image"
+          src="assets/img/image.jpeg"
+          alt="Profile Image"
+        />
         <h1>Dripar Gupta</h1>
         <p>Address: D-170A, D Block, Sector 50, Noida, Uttar Pradesh 201301</p>
         <p>
-          Contact No.: 8756653868
-          <br />
-          Email: gd875665@gmail.com
+          Contact No: <a href="tel:8756653868">8756653868</a> <br />
+          Email: <a href="mailto:gd875665@gmail.com">gd875665@gmail.com</a>
           <br />
           LinkedIn:
           <a href="https://www.linkedin.com/in/dripar-g-6119631b5/"
@@ -460,5 +458,47 @@
         Place: Prayagraj (Allahabad)
       </div>
     </div>
+    <script>
+      document.body.insertAdjacentHTML(
+        "beforeend",
+        `<aside class="cbwtphone_wrapper">
+          <img class="cbwtphone_icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png"></img>
+          <a class="cbwtphone_link" target="_blank" href="https://wa.me/+918756653868?text=Hi">
+            <span class="cbwtphone_text">WhatsApp</span>
+          </a>
+        </aside>`
+      );
+    
+      newStyle = document.createElement("style");
+      newStyle.type = "text/css";
+      newStyle.innerHTML += `.cbwtphone_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2147483647;
+        text-decoration: none;
+        font-size: 120%;
+        font-weight: bold;
+        background: linear-gradient(-160deg, #2466db 0%, #0db8af 78.66%);
+      }
+      .cbwtphone_link {
+        text-decoration: none;
+      }
+      .cbwtphone_icon {
+        width: 50px;
+        height: 50px;
+        vertical-align: middle;
+      }
+      .cbwtphone_text {
+        vertical-align: middle;
+        color: #fff;
+      }`;
+    
+      document.head.appendChild(newStyle);
+    </script>
   </body>
 </html>
