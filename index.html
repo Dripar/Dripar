@@ -1,180 +1,275 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dripar Gupta - Resume</title>
-    <!-- Favicons -->
+    <meta name="description" content="Resume of Dripar Gupta" />
+    <title class="no-title">Resume - Dripar Gupta</title>
+    <!-- <link
+      rel="icon"
+      href="https://via.placeholder.com/50"
+      type="image/x-icon"
+    /> -->
     <link href="assets/img/favicon.ico" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <style>
+      /* Base styles */
       body {
         font-family: Arial, sans-serif;
-        font-size: 14px;
-        line-height: 1.5;
-        color: #333333;
-        background-color: #f1f1f1;
+        line-height: 1.6;
         margin: 0;
-        padding: 20px;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
       }
 
-      .section {
-        background-color: #ffffff;
-        margin-bottom: 20px;
-        padding: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       }
 
-      h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-        color: #333333;
+      /* Header */
+      header {
+        background: #333;
+        color: #fff;
+        padding: 1.5rem 0;
+        text-align: center;
       }
 
-      h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-        color: #007bff;
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
       }
 
-      p {
-        margin-bottom: 10px;
+      /* Sections */
+      section {
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
       }
 
-      a {
-        color: #007bff;
-        text-decoration: none;
+      section h2 {
+        color: #444;
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
       }
 
-      .print-btn {
-        display: inline-block;
-        background-color: #007bff;
-        color: #ffffff;
-        padding: 10px 20px;
-        border-radius: 4px;
-        font-size: 16px;
-        line-height: 1;
-        cursor: pointer;
-        margin-top: 10px;
-        float: right;
-      }
-
-      .print-icon {
-        display: inline-block;
-        font-size: 16px;
-        margin-right: 5px;
-      }
-
-      table {
+      /* Table styles */
+      .responsive-table {
         width: 100%;
         border-collapse: collapse;
-        margin-bottom: 10px;
+        margin: 1rem 0;
+        background: #fff;
       }
 
-      th,
-      td {
-        padding: 8px;
+      .responsive-table th,
+      .responsive-table td {
+        padding: 12px;
         text-align: left;
-        border-bottom: 1px solid #dddddd;
+        border: 1px solid #ddd;
       }
 
-      .profile-image {
-        display: block;
-        max-width: 150px;
-        height: auto;
+      .responsive-table th {
+        background-color: #333;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .responsive-table tr:nth-child(even) {
+        background-color: #f8f8f8;
+      }
+
+      .responsive-table tr:hover {
+        background-color: #f5f5f5;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        padding: 0.8rem 1.8rem;
+        margin-top: 1.5rem;
+        font-size: 1.1rem;
+        color: #fff;
+        background-color: #007bff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+      }
+
+      .whatsapp-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #25d366;
+        color: white;
         border-radius: 50%;
-        margin-bottom: 10px;
-        float: right;
+        padding: 15px;
+        font-size: 1.8rem;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
       }
 
-      @media (max-width: 768px) {
-        table {
+      .whatsapp-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 1200px) {
+        .container {
+          margin: 1rem;
+          padding: 1.5rem;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+
+        .container {
+          padding: 1rem;
+        }
+
+        .responsive-table {
           display: block;
           overflow-x: auto;
+          white-space: nowrap;
+        }
+
+        .responsive-table th,
+        .responsive-table td {
+          padding: 8px;
+          font-size: 0.9rem;
         }
       }
 
-      @media (max-width: 768px) {
+      @media screen and (max-width: 480px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+
+        section {
+          padding: 0 0.5rem;
+        }
+
+        .btn {
+          padding: 0.6rem 1.2rem;
+          font-size: 1rem;
+        }
+
+        .whatsapp-btn {
+          bottom: 20px;
+          right: 20px;
+          padding: 12px;
+          font-size: 1.5rem;
+        }
+      }
+      .profile-section {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        overflow: hidden;
+      }
+
+      .profile-section h2 {
+        color: #444;
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .profile-section a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .profile-section a:hover {
+        color: #0056b3;
+      }
+
+      /* Print styles */
+      @media print {
         body {
-          padding: 10px;
+          background: white;
         }
 
-        .section {
-          padding: 10px;
+        .container {
+          box-shadow: none;
           margin: 0;
+          padding: 1rem;
         }
 
-        table {
-          font-size: 12px;
+        .whatsapp-btn,
+        .btn {
+          display: none;
+        }
+        .no-print {
+          display: none;
         }
       }
     </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script>
-      function downloadPDF() {
-        const element = document.getElementById("print");
-        const opt = {
-          margin: [10, 10, 10, 10],
-          filename: "dripar-resume.pdf",
-          image: {
-            type: "jpeg",
-            quality: 0.98,
-          },
-          html2canvas: {
-            scale: 2,
-          },
-          jsPDF: {
-            unit: "mm",
-            format: "a4",
-            orientation: "portrait",
-          },
-        };
-
-        html2pdf().set(opt).from(element).save();
-      }
-    </script>
-
-    <script>
-      function getCurrentDate() {
-        const currentDate = new Date();
-        const formattedDate = currentDate.toDateString();
-        return formattedDate;
-      }
-    </script>
   </head>
 
   <body>
-    <button class="print-btn" onclick="downloadPDF()">
-      Download<span class="print-icon">&#128194;</span>
-    </button>
-    <div id="print">
-      <div class="section">
-        <img
-          class="profile-image"
-          src="assets/img/image.jpeg"
-          alt="Profile Image"
-        />
-        <h1>Dripar Gupta</h1>
-        <p>Address: D-170A, D Block, Sector 50, Noida, Uttar Pradesh 201301</p>
-        <p>
-          Contact No: <a href="tel:8756653868">8756653868</a> <br />
-          Email: <a href="mailto:gd875665@gmail.com">gd875665@gmail.com</a>
-          <br />
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/dripar-g-6119631b5/"
-            >LinkedIn Profile</a
-          >
-          <br />
-          Resume:
-          <a href="https://dripar.github.io/Dripar/">My Resume</a>
-        </p>
-        <!-- <p>GitHub: <a href="#">GitHub Profile</a></p> -->
-      </div>
+    <header>
+      <h1>Resume of Dripar Gupta</h1>
+    </header>
 
-      <div class="section">
-        <h2>CAREER OBJECTIVE</h2>
+    <div class="container">
+      <section id="contact-info">
+        <div class="profile-section">
+          <!-- <img
+            class="profile-image"
+            src="assets/img/image.jpeg"
+            alt="Profile Image"
+            style="
+              float: right;
+              max-width: 150px;
+              border-radius: 50%;
+              margin-left: 20px;
+            "
+          /> -->
+          <h2>Contact Information</h2>
+          <p>
+            Address: D-170A, D Block, Sector 50, Noida, Uttar Pradesh 201301
+          </p>
+          <p>
+            Contact No: <a href="tel:8756653868">8756653868</a><br />
+            Email: <a href="mailto:gd875665@gmail.com">gd875665@gmail.com</a
+            ><br />
+            LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/dripar-g-6119631b5/"
+              target="_blank"
+            >
+              LinkedIn Profile </a
+            ><br />
+            Resume:
+            <a href="https://dripar.github.io/Dripar/" target="_blank">
+              My Resume
+            </a>
+          </p>
+        </div>
+      </section>
+      <!-- Career Objective Section -->
+      <section id="career-objective">
+        <h2>Career Objective</h2>
         <p>
           To take up a challenging career and grow with honesty, loyalty, good
           relationships, and exceptional performance. I aim to utilize my
@@ -182,11 +277,12 @@
           organization. I possess strong teamwork skills and a creative and
           determined approach to work.
         </p>
-      </div>
+      </section>
 
-      <div class="section">
-        <h2>EDUCATION</h2>
-        <table>
+      <!-- Education Section -->
+      <section id="education">
+        <h2>Education</h2>
+        <table class="responsive-table">
           <tr>
             <th>Degree/Certificate</th>
             <th>Board/University</th>
@@ -219,15 +315,16 @@
           </tr>
           <tr>
             <td>MCA</td>
-            <td>Mangalayatan University (2<sup>nd</sup> year)</td>
-            <td>2023</td>
-            <td>Pursuing</td>
+            <td>Mangalayatan University</td>
+            <td>2024</td>
+            <td>71%</td>
           </tr>
         </table>
-      </div>
+      </section>
 
-      <div class="section">
-        <h2>TECHNICAL SKILLS</h2>
+      <!-- Technical Skills Section -->
+      <section id="technical-skills">
+        <h2>Technical Skills</h2>
         <ul>
           <li>
             <strong>Programming Languages</strong>: PHP, Laravel, Node.js,C,
@@ -242,7 +339,7 @@
             <strong>API Integration</strong>: Google Sign-In, Apple Sign-In,
             Calendly
           </li>
-          <li><strong>Version Control</strong>: GitHub</li>
+          <li><strong>Version Control</strong>: GitHub ,Bitbucket</li>
           <li>
             <strong>Software Proficiency</strong>: MS Word, Excel, PowerPoint,
             MS Access, Internet, Paint, etc.
@@ -256,14 +353,45 @@
             Hostinger
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="section">
+      <!-- Projects Section -->
+      <!-- <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <strong>Portfolio Website</strong>: Designed and deployed a personal
+            portfolio website using React.js and Firebase.
+          </li>
+          <li>
+            <strong>E-commerce Platform</strong>: Built an e-commerce website
+            with a dynamic product catalog and payment gateway integration.
+            <a href="https://example.com" target="_blank">View Project</a>
+          </li>
+        </ul>
+      </section> -->
+
+      <!-- Work Experience Section -->
+      <!-- <section id="work-experience">
+        <h2>Work Experience</h2>
+        <ul>
+          <li>
+            <strong>Intern - ABC Corporation</strong> (June 2022 - Dec 2022):
+            <ul>
+              <li>Developed APIs for inventory management using Node.js.</li>
+              <li>Improved database performance by optimizing SQL queries.</li>
+            </ul>
+          </li>
+        </ul>
+      </section> -->
+
+      <!-- Projects Section -->
+      <section id="projects">
         <h2>PROJECT WORK</h2>
         <ul>
           <li>
             <strong>Collage Management (Student Data)</strong> web application
-            in PHP:
+            in PHP.
           </li>
           <li>
             <strong>Login Model (PHP)</strong>: Implemented a login system in
@@ -283,10 +411,21 @@
             maintaining an admin dashboard using Laravel, facilitating efficient
             project management and data handling.
           </li>
+          <li>
+            <strong>E-Commerce:</strong> Developed a robust e-commerce platform
+            with features like product management, payment gateway integration,
+            and user-friendly interface.
+          </li>
+          <li>
+            <strong>HRMS:</strong> Developed a comprehensive Human Resource
+            Management System for managing employee data, payroll, leaves, and
+            performance tracking.
+          </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="section">
+      <!-- API Work Section -->
+      <section id="api-work">
         <h2>API WORK</h2>
         <ul>
           <li>
@@ -316,11 +455,28 @@
                 user experience by offering up-to-date information for fantasy
                 team selection and match analysis.
               </li>
+
+              <li>
+                <strong>Shiprocket:</strong> Integrated Shiprocket for efficient
+                order management, enabling seamless order processing, real-time
+                shipment tracking, and delivery status updates. This ensures
+                timely deliveries, enhances user experience with accurate
+                shipping information, and reduces delivery-related issues for
+                Styliv users.
+              </li>
+              <li>
+                <strong>Razorpay:</strong> Integrated Razorpay for secure online
+                transactions, offering users a smooth payment experience via
+                credit/debit cards, net banking, and wallets. This ensures
+                compliance with security standards, enhancing user trust and
+                facilitating reliable payments on the platform.
+              </li>
             </ul>
           </li>
         </ul>
+
         <ul>
-          <li><strong>APIs Created for app </strong></li>
+          <li><strong>APIs Created for app</strong></li>
           <ul>
             <li>
               <strong>Kidseau App API:</strong> Developed API for facilitating
@@ -336,50 +492,49 @@
             </li>
           </ul>
         </ul>
-      </div>
+      </section>
 
-      <div class="section">
+      <!-- Work Experience Section -->
+      <section id="work-experience">
         <h2>EXPERIENCE</h2>
         <ul>
           <li>
-            <strong>Company Name</strong>:LOCGFX PRIVATE LIMITED
+            <strong>Company Name:</strong> LOCGFX PRIVATE LIMITED
             <br />
-            <strong>Position Held</strong>: Backend Developer
+            <strong>Position Held:</strong> Backend Developer
             <br />
-            <strong>Duration</strong>: 28-September-2022 to 7-November-2023
+            <strong>Duration:</strong> September 2022 to November 2023
             <br />
-            <strong>Project Involvement and Accomplishments</strong>:
+            <strong>Project Involvement and Accomplishments:</strong>
             <ul>
               <li>
-                Below are details of the projects I have worked on:
+                Below are the projects I worked on:
                 <ol>
                   <li>
-                    In the first project, I developed the API for the app and an
-                    admin dashboard with multiple login and full control over
-                    the app's data. This project included features like
-                    messaging for chat, posting, and sending messages. You can
-                    learn more about it at:
-                    <a href="https://kidseau.com">https://kidseau.com</a>
+                    In the first project, I developed the API and an admin
+                    dashboard with multi-login support and complete control over
+                    the app's data. Features like messaging, posting, and
+                    message sending were implemented. Learn more at:
+                    <a href="https://kidseau.com" target="_blank"
+                      >https://kidseau.com</a
+                    >
                   </li>
                   <li>
-                    In the second project, I collaborated with a team to develop
-                    a video call and appointment booking system for doctors and
-                    patients. I added various features and you can find more
-                    information at:
-                    <a href="http://www.theataraxis.com/"
+                    In the second project, I collaborated with the team to
+                    develop a video call and appointment booking system for
+                    doctors and patients. I contributed to the addition of
+                    various features. More details can be found at:
+                    <a href="http://www.theataraxis.com/" target="_blank"
                       >http://www.theataraxis.com/</a
                     >
                   </li>
                   <li>
-                    In the thread project, Contributed to Seedtree
-                    Collaborative's success as a skilled developer, bringing
-                    innovation and technical expertise to streamline processes.
-                    Played a key role in implementing digital solutions,
-                    ensuring a seamless experience for clients and
-                    professionals. Proven track record of excellence in the
-                    ever-evolving technology landscape. you can find more
-                    information at:
-                    <a href="https://www.seedtree.in/"
+                    In the third project, I contributed to the success of
+                    Seedtree Collaborative by streamlining processes and
+                    implementing digital solutions. My role ensured a seamless
+                    experience for both clients and professionals. Learn more
+                    at:
+                    <a href="https://www.seedtree.in/" target="_blank"
                       >https://www.seedtree.in/</a
                     >
                   </li>
@@ -387,69 +542,135 @@
               </li>
             </ul>
           </li>
-          <br />
+
           <li>
-            <strong>Company Name</strong>: NDMEAA (A.A.P.S Ecommerce world Pvt
+            <strong>Company Name:</strong> NDMEAA (A.A.P.S Ecommerce World Pvt
             Ltd)
             <br />
-            <strong>Position Held</strong>: Backend Developer (PHP Laravel)
+            <strong>Position Held:</strong> Backend Developer (PHP Laravel)
             <br />
-            <strong>Duration</strong>: 28-November-2023 to Currently Working
+            <strong>Duration:</strong> November 2023 to May 2024
             <br />
-            <strong>Project Involvement and Accomplishments</strong>:
+            <strong>Project Involvement and Accomplishments:</strong>
             <ul>
               <li>
-                Below are details of the projects I have worked on:
-                <ol>
-                  <li>
-                    <strong>Fantasy App Project</strong>:
-                    <p>
-                      Leading the development of an immersive fantasy app using
-                      PHP Laravel, actively contributing to backend
-                      functionalities for a seamless user experience. Stay tuned
-                      for further project details!
-                    </p>
-                    you can find more information at:
-                    <a href="https://googly11.in/">googly11.in</a>
-                  </li>
-                </ol>
+                <strong>Fantasy App Project:</strong> Led the development of a
+                fantasy app using PHP Laravel, focusing on backend functionality
+                to ensure a smooth and engaging user experience. Further details
+                to be shared soon. You can learn more at:
+                <a href="https://googly11.in/" target="_blank">googly11.in</a>
               </li>
             </ul>
           </li>
-     
-          <br />
           <li>
-            <strong>Company Name</strong>: Alobha Technologies Pvt. Ltd 
+            <strong>Company Name</strong>: Alobha Technologies Pvt. Ltd
             <br />
             <strong>Position Held</strong>: Backend Developer (PHP Laravel)
             <br />
-            <strong>Duration</strong>: 28-November-2023 to Currently Working
+            <strong>Duration</strong>: June 2024 to present
             <br />
             <strong>Project Involvement and Accomplishments</strong>:
             <ul>
               <li>
-                Below are details of the projects I have worked on:
-                <ol>
+                <h3>E-commerce Project</h3>
+                Developed an e-commerce platform using PHP Laravel, focusing on
+                backend functionalities to ensure a seamless user experience.
+                <ul>
                   <li>
-                    <strong>Fantasy App Project</strong>:
-                    <p>
-                      Leading the development of an immersive fantasy app using
-                      PHP Laravel, actively contributing to backend
-                      functionalities for a seamless user experience. Stay tuned
-                      for further project details!
-                    </p>
-                    you can find more information at:
-                    <a href="https://googly11.in/">googly11.in</a>
+                    Implemented product, category, and order management in the
+                    admin panel.
                   </li>
-                </ol>
+                  <li>
+                    Managed multiple vendors and their products, including
+                    integration of a payment gateway.
+                  </li>
+                  <li>
+                    Designed and developed dynamic frontend pages such as the
+                    home page, product details page, and cart page.
+                  </li>
+                  <li>
+                    Implemented user wallet management and a rewards system
+                    (Super Coins) for user incentives.
+                  </li>
+                  <li>
+                    Handled account activity tracking, transaction management,
+                    and refund processes.
+                  </li>
+                  <li>
+                    Integrated <strong>Shiprocket</strong> for product shipping
+                    and tracking.
+                  </li>
+                  <li>Built coupon and offer management functionalities.</li>
+                  <li>Enabled bulk upload of products and categories.</li>
+                  <li>
+                    Developed user and vendor dashboards with email and SMS
+                    notification features.
+                  </li>
+                  <li>Implemented a user-friendly search functionality.</li>
+                  <li>
+                    Implemented <strong>Razorpay Payment Gateway</strong> for
+                    secure online payments.
+                  </li>
+                </ul>
+                <strong>Live Project:</strong>
+                <a href="https://styliv.in">Styliv</a>
+              </li>
+              <li>
+                <h3>Product Management System (Based on User Base)</h3>
+                Created an admin panel for efficient product management,
+                including features for product addition and reporting.
+                <ul>
+                  <li>
+                    Managed multiple user dashboards with permission-based
+                    access and product approval workflows.
+                  </li>
+                  <li>
+                    Allocated products based on user segmentation and handled
+                    stock and quantity management.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h3>Human Resource Management System (HRMS)</h3>
+                Designed and implemented a comprehensive HR management system
+                with a robust admin panel.
+                <ul>
+                  <li>
+                    Managed employee data, including salary, leaves, attendance,
+                    and bank account details.
+                  </li>
+                  <li>
+                    Developed workflows for employee loans, bonuses, insurance,
+                    and advanced salary management.
+                  </li>
+                  <li>
+                    Streamlined recruitment processes, including job postings,
+                    applications, meeting scheduling, and employee onboarding.
+                  </li>
+                  <li>
+                    Managed employee training, promotions, transfers,
+                    resignations, and terminations.
+                  </li>
+                  <li>
+                    Automated payslip generation and employee salary processing.
+                  </li>
+                  <li>
+                    Added leave management with multi-level approval workflows
+                    (HR and company admin).
+                  </li>
+                  <li>
+                    Incorporated email and SMS notification functionality for
+                    various employee updates and approvals.
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
-          <!-- Add more work experience entries following the same format -->
         </ul>
-      </div>
+      </section>
 
-      <div class="section">
+      <!-- Personal Profile Section -->
+      <section id="personal-profile">
         <h2>PERSONAL PROFILE</h2>
         <ul>
           <li><strong>Name</strong>: Dripar Gupta</li>
@@ -467,66 +688,64 @@
             Listening to Songs
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="section">
-        <h2>DECLARATION</h2>
+      <!-- Declaration Section -->
+      <section id="declaration">
+        <h2>Declaration</h2>
         <p>
-          I hereby declare that the statements made in this document are true to
-          the best of my knowledge and belief.
+          I hereby declare that the information provided is true to the best of
+          my knowledge and belief.
         </p>
         <p>
           Date:
           <script>
-            document.write(getCurrentDate());
+            var date = new Date();
+            var day = String(date.getDate()).padStart(2, "0");
+            var month = String(date.getMonth() + 1).padStart(2, "0"); // Month is 0-based, so we add 1
+            var year = date.getFullYear();
+            document.write(day + "-" + month + "-" + year);
           </script>
         </p>
-        Signature: <stamp>(Dripar Gupta)</stamp> <br />
+        <p>Place: Sector 50, Noida, Uttar Pradesh 201301</p>
+      </section>
 
-        Place: Prayagraj (Allahabad)
-      </div>
+      <!-- PDF Download Button -->
+      <a href="#" class="btn no-print" onclick="window.print();"
+        >Download PDF</a
+      >
     </div>
+
+    <!-- WhatsApp Contact Button -->
+    <a
+      href="https://wa.me/+918756653868?text=Hii"
+      class="whatsapp-btn no-print"
+      target="_blank"
+      >&#x1F4AC;</a
+    >
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
-      document.body.insertAdjacentHTML(
-        "beforeend",
-        `<aside class="cbwtphone_wrapper">
-          <img class="cbwtphone_icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png"></img>
-          <a class="cbwtphone_link" target="_blank" href="https://wa.me/+918756653868?text=Hi">
-            <span class="cbwtphone_text">WhatsApp</span>
-          </a>
-        </aside>`
-      );
-    
-      newStyle = document.createElement("style");
-      newStyle.type = "text/css";
-      newStyle.innerHTML += `.cbwtphone_wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 2147483647;
-        text-decoration: none;
-        font-size: 120%;
-        font-weight: bold;
-        background: linear-gradient(-160deg, #2466db 0%, #0db8af 78.66%);
+      function downloadPDF() {
+        const element = document.getElementById("print");
+        const opt = {
+          margin: [10, 10, 10, 10],
+          filename: "dripar-resume.pdf",
+          image: {
+            type: "jpeg",
+            quality: 0.98,
+          },
+          html2canvas: {
+            scale: 2,
+          },
+          jsPDF: {
+            unit: "mm",
+            format: "a4",
+            orientation: "portrait",
+          },
+        };
+
+        html2pdf().set(opt).from(element).save();
       }
-      .cbwtphone_link {
-        text-decoration: none;
-      }
-      .cbwtphone_icon {
-        width: 50px;
-        height: 50px;
-        vertical-align: middle;
-      }
-      .cbwtphone_text {
-        vertical-align: middle;
-        color: #fff;
-      }`;
-    
-      document.head.appendChild(newStyle);
-    </script>
+    </script> -->
   </body>
 </html>
