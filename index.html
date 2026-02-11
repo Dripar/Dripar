@@ -4,212 +4,168 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Resume of Dripar Gupta" />
-    <title class="no-title">Resume - Dripar Gupta</title>
-    <!-- <link
-      rel="icon"
-      href="https://via.placeholder.com/50"
-      type="image/x-icon"
-    /> -->
-    <link href="assets/img/favicon.ico" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <title>Resume - Dripar Gupta</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <style>
-      /* Base styles */
+      /* Base styles with CSS variables */
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --background-color: #f8f9fa;
+        --text-color: #2c3e50;
+        --section-bg: #ffffff;
+      }
+
+      /* Responsive typography using clamp */
+      html {
+        font-size: clamp(14px, 2vw, 16px);
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.8;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f9;
-        color: #333;
+        background: var(--background-color);
+        color: var(--text-color);
+        overflow-x: hidden;
       }
 
-      /* Container */
+      /* Container with responsive padding */
       .container {
-        max-width: 1200px;
-        margin: 2rem auto;
-        background: #fff;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        width: min(1200px, 95%);
+        margin: clamp(1rem, 3vw, 2rem) auto;
+        padding: clamp(1rem, 3vw, 2rem);
+        background: var(--section-bg);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       }
 
-      /* Header */
+      /* Responsive header */
       header {
-        background: #333;
-        color: #fff;
-        padding: 1.5rem 0;
+        background: linear-gradient(135deg, #2c3e50, #3498db);
+        color: white;
+        padding: 1.5rem 1rem;
         text-align: center;
+        border-radius: 15px;
+        margin-bottom: 1rem;
       }
 
       header h1 {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
         margin: 0;
-        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
       }
 
-      /* Sections */
+      header h3,
+      header h4 {
+        font-size: clamp(1rem, 2vw, 1.4rem);
+        margin: 0.5rem 0;
+      }
+
+      /* Responsive sections */
       section {
-        margin-bottom: 2.5rem;
-        padding: 0 1rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        border-bottom: 1px solid #eee;
       }
 
       section h2 {
-        color: #444;
-        border-bottom: 2px solid #333;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1.5rem;
+        font-size: clamp(1.4rem, 3vw, 1.8rem);
+        padding-bottom: clamp(0.5rem, 2vw, 0.8rem);
       }
 
-      /* Table styles */
+      /* Responsive table */
       .responsive-table {
         width: 100%;
-        border-collapse: collapse;
-        margin: 1rem 0;
-        background: #fff;
-      }
-
-      .responsive-table th,
-      .responsive-table td {
-        padding: 12px;
-        text-align: left;
-        border: 1px solid #ddd;
-      }
-
-      .responsive-table th {
-        background-color: #333;
-        color: #fff;
-        font-weight: bold;
-      }
-
-      .responsive-table tr:nth-child(even) {
-        background-color: #f8f8f8;
-      }
-
-      .responsive-table tr:hover {
-        background-color: #f5f5f5;
-      }
-
-      /* Buttons */
-      .btn {
-        display: inline-block;
-        padding: 0.8rem 1.8rem;
-        margin-top: 1.5rem;
-        font-size: 1.1rem;
-        color: #fff;
-        background-color: #007bff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
-
-      .btn:hover {
-        background-color: #0056b3;
-        transform: translateY(-2px);
-      }
-
-      .whatsapp-btn {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background: #25d366;
-        color: white;
-        border-radius: 50%;
-        padding: 15px;
-        font-size: 1.8rem;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-        z-index: 1000;
-      }
-
-      .whatsapp-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-      }
-
-      /* Responsive Design */
-      @media screen and (max-width: 1200px) {
-        .container {
-          margin: 1rem;
-          padding: 1.5rem;
-        }
+        overflow-x: auto;
+        display: block;
       }
 
       @media screen and (max-width: 768px) {
-        header h1 {
-          font-size: 1.8rem;
+        .responsive-table table {
+          min-width: 600px;
         }
 
-        .container {
-          padding: 1rem;
-        }
-
-        .responsive-table {
-          display: block;
-          overflow-x: auto;
-          white-space: nowrap;
-        }
-
-        .responsive-table th,
-        .responsive-table td {
+        .responsive-table td,
+        .responsive-table th {
           padding: 8px;
           font-size: 0.9rem;
         }
       }
 
+      /* Responsive skills section */
+      .skill-tag {
+        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+        padding: clamp(4px, 1vw, 8px) clamp(10px, 2vw, 15px);
+        margin: clamp(3px, 1vw, 5px);
+      }
+
+      /* Responsive buttons */
+      .btn {
+        padding: clamp(8px, 2vw, 12px) clamp(15px, 3vw, 25px);
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .whatsapp-btn {
+        width: clamp(45px, 8vw, 60px);
+        height: clamp(45px, 8vw, 60px);
+        bottom: clamp(20px, 4vw, 30px);
+        right: clamp(20px, 4vw, 30px);
+        font-size: clamp(1.4rem, 3vw, 1.8rem);
+      }
+
+      /* Mobile-specific styles */
       @media screen and (max-width: 480px) {
-        header h1 {
-          font-size: 1.5rem;
+        .container {
+          width: 100%;
+          margin: 0;
+          border-radius: 0;
+          padding: 1rem;
         }
-        header h3 {
-          font-size: 1.5rem;
 
-          header h4 {
-            font-size: 1.5rem;
-          }
-          .hade {
-            margin: -4px;
-          }
-        }
         section {
-          padding: 0 0.5rem;
+          padding: 1rem;
+          margin-bottom: 1rem;
         }
 
-        .btn {
-          padding: 0.6rem 1.2rem;
-          font-size: 1rem;
+        ul {
+          padding-left: 1rem;
         }
 
-        .whatsapp-btn {
-          bottom: 20px;
-          right: 20px;
-          padding: 12px;
-          font-size: 1.5rem;
+        li {
+          margin-bottom: 0.8rem;
+        }
+
+        .contact-info a {
+          display: block;
+          margin: 5px 0;
         }
       }
-      .profile-section {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        margin-bottom: 2rem;
-        overflow: hidden;
-      }
 
-      .profile-section h2 {
-        color: #444;
-        border-bottom: 2px solid #333;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-      }
-
-      .profile-section a {
-        color: #007bff;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      .profile-section a:hover {
-        color: #0056b3;
+      /* Tablet-specific styles */
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        .container {
+          width: 90%;
+          margin: 1rem auto;
+        }
       }
 
       /* Print styles */
@@ -219,66 +175,57 @@
         }
 
         .container {
-          box-shadow: none;
+          width: 100%;
           margin: 0;
-          padding: 1rem;
+          padding: 0;
+          box-shadow: none;
         }
 
-        .whatsapp-btn,
-        .btn {
-          display: none;
-        }
         .no-print {
-          display: none;
+          display: none !important;
+        }
+
+        section {
+          break-inside: avoid;
+        }
+      }
+
+      /* Progressive enhancement */
+      @supports (display: grid) {
+        .skills-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1rem;
         }
       }
     </style>
-  </head>
 
+    <!-- Add viewport meta tag if not present -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+  </head>
   <body>
     <header>
       <h1>Resume of Dripar Gupta</h1>
-      <h3 style="margin: -4px">Backend Developer</h3>
+      <h3 style="margin: -4px">Software Engineer</h3>
       <h4 style="margin: -4px">
-        ( PHP Laravel | API Developed | API Integration | Web Applications
+        ( PHP Laravel | PIM Developer | API Developed | API Integration | Web Applications
         Development )
       </h4>
     </header>
 
     <div class="container">
       <section id="contact-info">
-        <!-- <div class="profile-section"> -->
-        <!-- <img
-            class="profile-image"
-            src="assets/img/image.jpeg"
-            alt="Profile Image"
-            style="
-              float: right;
-              max-width: 150px;
-              border-radius: 50%;
-              margin-left: 20px;
-            "
-          /> -->
         <h2>Contact Information</h2>
-        <p>
-          <strong> Address:</strong> D-170A, D Block, Sector 50, Noida, Uttar
-          Pradesh 201301
-          <br />
-          <strong> Contact No:</strong>
-          <a href="tel:8756653868" style="color: #333">8756653868</a><br />
-          <strong> Email:</strong>
-          <a href="mailto:gd875665@gmail.com">gd875665@gmail.com</a><br />
-          <strong>LinkedIn: </strong>
-          <a
-            href="https://www.linkedin.com/in/dripar-g-6119631b5/"
-            target="_blank"
-          >
-            LinkedIn Profile </a
-          ><br />
-          <strong> Resume: </strong>
-          <a href="https://dripar.github.io/Dripar/" target="_blank"> click </a>
+        <p style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; line-height: 1.6;">
+          <span><strong>Address:</strong> Noida, Uttar Pradesh 201301</span>
+          <span><strong>Contact:</strong> <a href="tel:8756653868" style="color: #333">8756653868</a></span>
+          <span><strong>Email:</strong> <a href="mailto:gd875665@gmail.com">gd875665@gmail.com</a></span>
+          <span><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/dripar" target="_blank">Profile</a></span>
+          <span><strong>Portfolio:</strong> <a href="https://dripar.github.io/Dripar/" target="_blank">Link</a></span>
         </p>
-        <!-- </div> -->
       </section>
       <!-- Career Objective Section -->
       <section id="career-objective">
@@ -295,44 +242,31 @@
       <!-- Education Section -->
       <section id="education">
         <h2>Education</h2>
-        <table class="responsive-table">
-          <tr>
-            <th>Degree/Certificate</th>
-            <th>Board/University</th>
-            <th>Year</th>
-            <th>Percentage</th>
-          </tr>
-          <tr>
-            <td>Secondary</td>
-            <td>UP Board</td>
-            <td>2015</td>
-            <td>72.5%</td>
-          </tr>
-          <tr>
-            <td>Senior Secondary</td>
-            <td>UP Board</td>
-            <td>2017</td>
-            <td>70%</td>
-          </tr>
-          <tr>
-            <td>Graduation</td>
-            <td>State University</td>
-            <td>2020</td>
-            <td>52%</td>
-          </tr>
-          <tr>
-            <td>PGDCA</td>
-            <td>Subharti University</td>
-            <td>2021</td>
-            <td>65%</td>
-          </tr>
-          <tr>
-            <td>MCA</td>
-            <td>Mangalayatan University</td>
-            <td>2024</td>
-            <td>71%</td>
-          </tr>
-        </table>
+        <div class="education-item">
+          <h3 style="margin-bottom: 5px;">Master of Computer Applications (MCA)</h3>
+          <p style="margin: 0;"><strong>Mangalayatan University</strong> | 2024</p>
+          <p style="margin: 0;">Percentage: 71%</p>
+        </div>
+        <div class="education-item" style="margin-top: 15px;">
+          <h3 style="margin-bottom: 5px;">PGDCA</h3>
+          <p style="margin: 0;"><strong>Subharti University</strong> | 2021</p>
+          <p style="margin: 0;">Percentage: 65%</p>
+        </div>
+        <div class="education-item" style="margin-top: 15px;">
+          <h3 style="margin-bottom: 5px;">Bachelor's Degree (Graduation)</h3>
+          <p style="margin: 0;"><strong>State University</strong> | 2020</p>
+          <p style="margin: 0;">Percentage: 52%</p>
+        </div>
+        <div class="education-item" style="margin-top: 15px;">
+          <h3 style="margin-bottom: 5px;">Senior Secondary (12th)</h3>
+          <p style="margin: 0;"><strong>UP Board</strong> | 2017</p>
+          <p style="margin: 0;">Percentage: 70%</p>
+        </div>
+        <div class="education-item" style="margin-top: 15px;">
+          <h3 style="margin-bottom: 5px;">Secondary (10th)</h3>
+          <p style="margin: 0;"><strong>UP Board</strong> | 2015</p>
+          <p style="margin: 0;">Percentage: 72.5%</p>
+        </div>
       </section>
 
       <!-- Technical Skills Section -->
@@ -340,8 +274,8 @@
         <h2>Technical Skills</h2>
         <ul>
           <li>
-            <strong>Programming Languages</strong>: PHP, Laravel, Node.js,C,
-            JavaScript, Python
+            <strong>Programming Languages</strong>: PHP, Laravel, Node.js, C,
+            JavaScript, Python, Apache, Nginx
           </li>
           <li>
             <strong>Web Development</strong>: HTML, HTML5, CSS, W3CSS,
@@ -362,46 +296,25 @@
             (Model-View-Controller) , Django -MVT (Model View Template)
           </li>
           <li>
-            <strong>Server Management</strong>: CPanel, CWP (Control Web Panel),
+            <strong>Server/Cloud Management</strong>: AWS, AWS S3, Docker, CPanel, CWP (Control Web Panel),
             Hostinger
           </li>
         </ul>
       </section>
 
       <!-- Projects Section -->
-      <!-- <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <strong>Portfolio Website</strong>: Designed and deployed a personal
-            portfolio website using React.js and Firebase.
-          </li>
-          <li>
-            <strong>E-commerce Platform</strong>: Built an e-commerce website
-            with a dynamic product catalog and payment gateway integration.
-            <a href="https://example.com" target="_blank">View Project</a>
-          </li>
-        </ul>
-      </section> -->
+
 
       <!-- Work Experience Section -->
-      <!-- <section id="work-experience">
-        <h2>Work Experience</h2>
-        <ul>
-          <li>
-            <strong>Intern - ABC Corporation</strong> (June 2022 - Dec 2022):
-            <ul>
-              <li>Developed APIs for inventory management using Node.js.</li>
-              <li>Improved database performance by optimizing SQL queries.</li>
-            </ul>
-          </li>
-        </ul>
-      </section> -->
+
 
       <!-- Projects Section -->
       <section id="projects">
         <h2>PROJECT WORK</h2>
         <ul>
+          <li>
+            <strong>UnoPim / Bagisto Packages</strong>: Open source contributions and package development for PIM and E-commerce platforms. Created multiple scalable packages.
+          </li>
           <li>
             <strong>Collage Management (Student Data)</strong> web application
             in PHP.
@@ -511,6 +424,25 @@
       <section id="work-experience">
         <h2>EXPERIENCE</h2>
         <ul>
+          <li>
+            <strong>Company Name:</strong> Webkul
+            <br />
+            <strong>Position Held:</strong> Software Engineer
+            <br />
+            <strong>Duration:</strong> Present
+            <br />
+            <strong>Project Involvement and Accomplishments:</strong>
+            <ul>
+              <li>
+                <strong>PIM & E-commerce Solutions:</strong> Conceptualizing and developing backend solutions for E-commerce and PIM systems.
+                <ul>
+                  <li>Expertise in <strong>Akeneo</strong>, <strong>UnoPim</strong>, and <strong>Bagisto</strong>.</li>
+                  <li>Developing scalable modules and API integrations.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
           <li>
             <strong>Company Name:</strong> LOCGFX PRIVATE LIMITED
             <br />
@@ -760,5 +692,13 @@
         html2pdf().set(opt).from(element).save();
       }
     </script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    </script>
   </body>
 </html>
