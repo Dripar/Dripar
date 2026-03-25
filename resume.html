@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resume of Dripar Gupta" />
+  <title>Resume - Dripar Gupta</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    /* Base styles with CSS variables */
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #e74c3c;
+      --background-color: #f8f9fa;
+      --text-color: #2c3e50;
+      --section-bg: #ffffff;
+    }
+
+    /* Responsive typography using clamp */
+    html {
+      font-size: clamp(14px, 2vw, 16px);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background: var(--background-color);
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    /* Container with responsive padding */
+    .container {
+      width: min(1200px, 95%);
+      margin: clamp(1rem, 3vw, 2rem) auto;
+      padding: clamp(1rem, 3vw, 2rem);
+      background: var(--section-bg);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive header */
+    header {
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    header h3,
+    header h4 {
+      font-size: clamp(1rem, 2vw, 1.4rem);
+      margin: 0.5rem 0;
+    }
+
+    /* Responsive sections */
+    section {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    section h2 {
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
+      padding-bottom: clamp(0.5rem, 2vw, 0.8rem);
+    }
+
+    /* Responsive table */
+    .responsive-table {
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+      .responsive-table table {
+        min-width: 600px;
+      }
+
+      .responsive-table td,
+      .responsive-table th {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Responsive skills section */
+    .skill-tag {
+      font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+      padding: clamp(4px, 1vw, 8px) clamp(10px, 2vw, 15px);
+      margin: clamp(3px, 1vw, 5px);
+    }
+
+    /* Responsive buttons */
+    .btn {
+      padding: clamp(8px, 2vw, 12px) clamp(15px, 3vw, 25px);
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .whatsapp-btn {
+      width: clamp(45px, 8vw, 60px);
+      height: clamp(45px, 8vw, 60px);
+      bottom: clamp(20px, 4vw, 30px);
+      right: clamp(20px, 4vw, 30px);
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
+    }
+
+    /* Mobile-specific styles */
+    @media screen and (max-width: 480px) {
+      .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 1rem;
+      }
+
+      section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        padding-left: 1rem;
+      }
+
+      li {
+        margin-bottom: 0.8rem;
+      }
+
+      .contact-info a {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+
+    /* Tablet-specific styles */
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+      .container {
+        width: 90%;
+        margin: 1rem auto;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+
+    /* Progressive enhancement */
+    @supports (display: grid) {
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+    }
+  </style>
+
+  <!-- Add viewport meta tag if not present -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  </head>
+
+<body>
+  <header>
+    <h1>Dripar Gupta</h1>
+    <h3 style="margin: -4px">Software Engineer</h3>
+    <h4 style="margin: -4px">
+      PHP (Laravel) Developer | Application Development | REST APIs
+    </h4>
+    <div class="no-print" style="margin-top: 15px;">
+      <a href="index.html" style="background: white; color: #2c3e50; padding: 5px 15px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.9rem; border: 1px solid #2c3e50;">View My Portfolio</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <section id="contact-info">
+      <h2>Contact Information</h2>
+      <p style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; line-height: 1.6;">
+        <span><strong>Address:</strong> Noida, Uttar Pradesh 201301</span>
+        <span><strong>Contact:</strong> <a href="tel:8756653868" style="color: #333">8756653868</a></span>
+        <span><strong>Email:</strong> <a href="mailto:gd875665@gmail.com">gd875665@gmail.com</a></span>
+        <span><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/dripar" target="_blank">Profile</a></span>
+        <span><strong>Portfolio:</strong> <a href="https://dripar.github.io/Dripar/" target="_blank">Link</a></span>
+      </p>
+    </section>
+    <!-- Professional Summary Section -->
+    <section id="professional-summary">
+      <h2>Professional Summary</h2>
+      <p>
+        Software Engineer with 3.5+ years of experience in PHP (Laravel) specializing in application development, REST APIs,
+        and scalable backend systems. Experienced in coding, debugging, testing, and deploying web applications on cloud/VPS environments. 
+        Advanced expertise in AI-driven development and the full Software Development Lifecycle (SDLC).
+      </p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3 style="margin-bottom: 5px;">Master of Computer Applications (MCA)</h3>
+        <p style="margin: 0;"><strong>Mangalayatan University</strong> | 2024</p>
+        <p style="margin: 0;">Percentage: 71%</p>
+      </div>
+      <div class="education-item" style="margin-top: 15px;">
+        <h3 style="margin-bottom: 5px;">PGDCA</h3>
+        <p style="margin: 0;"><strong>Subharti University</strong> | 2021</p>
+        <p style="margin: 0;">Percentage: 65%</p>
+      </div>
+      <div class="education-item" style="margin-top: 15px;">
+        <h3 style="margin-bottom: 5px;">Bachelor's Degree (Graduation)</h3>
+        <p style="margin: 0;"><strong>State University</strong> | 2020</p>
+        <p style="margin: 0;">Percentage: 52%</p>
+      </div>
+      <div class="education-item" style="margin-top: 15px;">
+        <h3 style="margin-bottom: 5px;">Senior Secondary (12th)</h3>
+        <p style="margin: 0;"><strong>UP Board</strong> | 2017</p>
+        <p style="margin: 0;">Percentage: 70%</p>
+      </div>
+      <div class="education-item" style="margin-top: 15px;">
+        <h3 style="margin-bottom: 5px;">Secondary (10th)</h3>
+        <p style="margin: 0;"><strong>UP Board</strong> | 2015</p>
+        <p style="margin: 0;">Percentage: 72.5%</p>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="technical-skills">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>
+          <strong>Languages & Frameworks</strong>: PHP (Laravel), JavaScript (Vue.js, Node.js), Python (Django), C
+        </li>
+        <li>
+          <strong>Web Technologies</strong>: HTML5, CSS3, AJAX, JSON, REST APIs, Bootstrap, Responsive Design, Payment Gateways
+          (Razorpay), Shipping APIs (Shiprocket)
+        </li>
+        <li>
+          <strong>Tools & Databases</strong>: Git, GitHub, Bitbucket, Postman, MySQL, Data Structures
+        </li>
+        <li>
+          <strong>Cloud & DevOps</strong>: Basic AWS (S3, EC2), DigitalOcean, VPS Deployment, Docker, CPanel, Release Management
+        </li>
+        <li>
+          <strong>Core Concepts</strong>: SDLC (Software Development Lifecycle), OOP, MVC, Application Development, Unit Testing
+          (PHPUnit), Integration, Debugging, Technical Support
+        </li>
+        <li>
+          <strong>SaaS Solutions</strong>: Experience in building and maintaining SaaS-based package solutions and scalable
+          architectures
+        </li>
+        <li>
+          <strong>AI & Machine Learning Integration</strong>: OpenAI API (GPT), Gemini API (Google), Claude API (Anthropic), Prompt Engineering, RAG (Retrieval-Augmented Generation)
+        </li>
+        <li>
+          <strong>AI Developer Tools</strong>: GitHub Copilot, Cursor AI, ChatGPT, Midjourney
+        </li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+
+
+    <!-- Work Experience Section -->
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>PROJECT WORK</h2>
+      <ul>
+        <li>
+          <strong>UnoPim (Product Information Management)</strong>: Specialized in centralizing, managing, and enriching product
+          data across multiple channels. Managed complex product catalogs, attributes, and categories for multichannel
+          distribution.
+          </li>
+          <li>
+            <strong>Bagisto (E-commerce Framework)</strong>: Developed custom packages and integrated flexible payment and
+            shipping providers into the Laravel-based e-commerce platform to streamline order fulfillment.
+          </li>
+          <li>
+            <strong>Collage Management (Student Data)</strong> web application
+            in PHP.
+          </li>
+          <li>
+            <strong>Login Model (PHP)</strong>: Implemented a login system in
+            PHP with support for multiple login models.
+          </li>
+          <li>
+            <strong>Parent-Teacher Communication and Activity Tracker</strong>
+          </li>
+          <li><strong>Doctor-Patient Communication Tool</strong></li>
+          <li>
+            <strong>Kanram Academy</strong>: Developed a web application using
+            Laravel for managing student data and blog posts. Implemented a blog
+            section in the admin dashboard for easy content management.
+          </li>
+          <li>
+            <strong>SeedTree Admin Dashboard</strong>: Created and currently
+            maintaining an admin dashboard using Laravel, facilitating efficient
+            project management and data handling.
+          </li>
+          <li>
+            <strong>E-Commerce:</strong> Developed a robust e-commerce platform
+            with features like product management, payment gateway integration,
+            and user-friendly interface.
+          </li>
+          <li>
+            <strong>HRMS:</strong> Developed a comprehensive Human Resource
+            Management System for managing employee data, payroll, leaves, and
+            performance tracking.
+          </li>
+          </ul>
+          </section>
+
+    <!-- API Work Section -->
+    <section id="api-work">
+      <h2>API WORK</h2>
+      <ul>
+        <li>
+          <strong>API Integration:</strong>
+          <ul>
+            <li>
+              <strong>Gmail Login API:</strong> Implemented Gmail Login API
+              for user authentication via Gmail accounts.
+            </li>
+            <li>
+              <strong>Apple Login API:</strong> Integrated Apple Login API for
+              seamless authentication using Apple IDs.
+            </li>
+            <li>
+              <strong>Facebook Login API:</strong> Implemented Facebook Login
+              API for user authentication via Facebook accounts.
+            </li>
+            <li>
+              <strong>SMS API:</strong> Integrated SMS API for sending
+              notifications and alerts via text messages.
+            </li>
+            <li>
+              <strong>Rapid Cricket API:</strong> Integrated Rapid API for
+              Cricket data retrieval and analysis in the Fantasy app "Googly
+              11". This API provides real-time cricket data, including match
+              scores, player statistics, and team performance, enhancing the
+              user experience by offering up-to-date information for fantasy
+              team selection and match analysis.
+            </li>
+
+            <li>
+              <strong>Shiprocket:</strong> Integrated Shiprocket for efficient
+              order management, enabling seamless order processing, real-time
+              shipment tracking, and delivery status updates. This ensures
+              timely deliveries, enhances user experience with accurate
+              shipping information, and reduces delivery-related issues for
+              Styliv users.
+            </li>
+            <li>
+              <strong>Razorpay:</strong> Integrated Razorpay for secure online
+              transactions, offering users a smooth payment experience via
+              credit/debit cards, net banking, and wallets. This ensures
+              compliance with security standards, enhancing user trust and
+              facilitating reliable payments on the platform.
+            </li>
+            </ul>
+            </li>
+            </ul>
+
+      <ul>
+        <li><strong>APIs Created for app</strong></li>
+        <ul>
+          <li>
+            <strong>Kidseau App API:</strong> Developed API for facilitating
+            communication between parents and teachers in the "Kidseau" app.
+            This API enables features such as daily activity tracking, school
+            feeds, and messaging system for real-time chat between teachers
+            and parents.
+          </li>
+          <li>
+            <strong>Fantasy Cricket API:</strong> Created API for
+            "Googly11.in" fantasy cricket app. This API allows users to create
+            teams, join contests, and view live player scores during matches.
+          </li>
+        </ul>
+      </ul>
+      </section>
+
+    <!-- Work Experience Section -->
+    <section id="work-experience">
+      <h2>EXPERIENCE</h2>
+      <ul>
+        <li>
+          <strong>Company Name:</strong> Webkul
+          <br />
+          <strong>Position Held:</strong> Software Engineer
+          <br />
+          <strong>Duration:</strong> Present
+          <br />
+          <strong>Project Involvement and Accomplishments:</strong>
+          <ul>
+            <li>Developed and maintained scalable web applications using Laravel.</li>
+            <li>Designed and integrated REST APIs for frontend and third-party services.</li>
+            <li>
+              <strong>PIM & E-commerce Solutions:</strong> Conceptualizing and developing backend solutions for
+              SaaS-based E-commerce and PIM systems.
+              <ul>
+                <li>Expertise in <strong>Akeneo</strong>, <strong>UnoPim</strong>, and <strong>Bagisto</strong>.</li>
+                <li>Developing scalable modules, package-based solutions, and API integrations.</li>
+                <li>Performed API testing using Postman to ensure robust service integration.</li>
+              </ul>
+            </li>
+            </ul>
+            </li>
+
+        <li>
+          <strong>Company Name:</strong> LOCGFX PRIVATE LIMITED
+          <br />
+          <strong>Position Held:</strong> Backend Developer
+          <br />
+          <strong>Duration:</strong> September 2022 to November 2023
+          <br />
+          <strong>Project Involvement and Accomplishments:</strong>
+          <ul>
+            <li>Developed and integrated REST APIs for SaaS applications.</li>
+            <li>Debugged and resolved critical application issues to improve system performance.</li>
+            <li>
+              Below are the projects I worked on:
+              <ol>
+                <li>
+                  <strong>Kidseau:</strong> Developed the API and a comprehensive admin
+                  dashboard with multi-login support for a SaaS-based communication tool.
+                  Features like real-time messaging and data management were implemented.
+                  Learn more at: <a href="https://kidseau.com" target="_blank">https://kidseau.com</a>
+                  </li>
+                  <li>
+                  <strong>Ataraxis:</strong> Collaborated on a Tele-health SaaS platform, developing a
+                  video call and appointment booking system for doctors and patients.
+                  More details: <a href="http://www.theataraxis.com/" target="_blank">http://www.theataraxis.com/</a>
+                  </li>
+                  <li>
+                  <strong>SeedTree:</strong> Streamlined processes by implementing digital solutions for
+                  project management, ensuring a seamless user experience.
+                  Learn more: <a href="https://www.seedtree.in/" target="_blank">https://www.seedtree.in/</a>
+                  </li>
+                  </ol>
+                  </li>
+                  </ul>
+                  </li>
+
+        <li>
+          <strong>Company Name:</strong> NDMEAA (A.A.P.S Ecommerce World Pvt
+          Ltd)
+          <br />
+          <strong>Position Held:</strong> Backend Developer (PHP Laravel)
+          <br />
+          <strong>Duration:</strong> November 2023 to May 2024
+          <br />
+          <strong>Project Involvement and Accomplishments:</strong>
+          <ul>
+            <li>
+              <strong>Fantasy App Project:</strong> Led the development of a
+              fantasy app using PHP Laravel, focusing on backend functionality
+              to ensure a smooth and engaging user experience. Further details
+              to be shared soon. You can learn more at:
+              <a href="https://googly11.in/" target="_blank">googly11.in</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Company Name</strong>: Alobha Technologies Pvt. Ltd
+          <br />
+          <strong>Position Held</strong>: Backend Developer (PHP Laravel)
+          <br />
+          <strong>Duration</strong>: June 2024 to present
+          <br />
+          <strong>Project Involvement and Accomplishments</strong>:
+          <ul>
+            <li>Deploys and maintains applications on cloud/VPS environments (AWS, DigitalOcean).</li>
+            <li>Implements basic unit testing (PHPUnit) and integration testing for all core features.</li>
+            <li>
+              <h3>E-commerce SaaS Platform (Styliv)</h3>
+              Developed a multi-vendor e-commerce platform using PHP Laravel, focusing on
+              scalable backend architectures and seamless integration.
+              <ul>
+                <li>Implemented product, category, and order management in the admin panel.</li>
+                <li>Integrated <strong>Razorpay Payment Gateway</strong> and <strong>Shiprocket</strong> for secure payments and
+                  automated shipping.</li>
+                <li>Developed user and vendor dashboards with email/SMS notification features.</li>
+              </ul>
+              <strong>Live Project:</strong> <a href="https://styliv.in">Styliv</a>
+            </li>
+            <li>
+              <h3>Human Resource Management System (HRMS)</h3>
+              Designed and implemented a comprehensive SaaS-based HR management system using the full SDLC.
+              <ul>
+                <li>Managed employee data (salary, leaves, attendance) and automated payslip generation.</li>
+                <li>Streamlined recruitment processes, onboarding, and performance tracking.</li>
+                <li>Added leave management with multi-level approval workflows.</li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                </ul>
+        </section>
+        
+        <!-- Certifications Section -->
+        <section id="certifications">
+          <h2>Certifications & Learning</h2>
+          <ul>
+            <li><strong>PHP (Laravel) Certification</strong> - Global Certification in Application Development</li>
+            <li><strong>REST API Design & Integration</strong> - Advanced Web Services Specialist</li>
+            <li><strong>Cloud Foundations (AWS)</strong> - Basic Proficiency in Cloud Deployment</li>
+          </ul>
+        </section>
+
+    <!-- Personal Profile Section -->
+    <section id="personal-profile">
+      <h2>PERSONAL PROFILE</h2>
+      <ul>
+        <li><strong>Name</strong>: Dripar Gupta</li>
+        <li><strong>Father's Name</strong>: Shiv Kumar Gupta</li>
+        <li><strong>Date of Birth</strong>: 20-April-2000</li>
+        <li><strong>Gender</strong>: Male</li>
+        <li>
+          <strong>Permanent Address</strong>: Sikaro Koraon, Allahabad
+          (Prayagraj), Uttar Pradesh 212306
+        </li>
+        <li><strong>Nationality</strong>: Indian</li>
+        <li><strong>Marital Status</strong>: Unmarried</li>
+        <li>
+          <strong>Hobbies</strong>: Coding, Language Learning, Traveling,
+          Listening to Songs
+        </li>
+      </ul>
+    </section>
+
+    <!-- Declaration Section -->
+    <section id="declaration">
+      <h2>Declaration</h2>
+      <p>
+        I hereby declare that the information provided is true to the best of
+        my knowledge and belief.
+      </p>
+      <p>
+        Date:
+        <script>
+          var date = new Date();
+          var day = String(date.getDate()).padStart(2, "0");
+          var month = String(date.getMonth() + 1).padStart(2, "0"); // Month is 0-based, so we add 1
+          var year = date.getFullYear();
+          document.write(day + "-" + month + "-" + year);
+        </script>
+      </p>
+      <p>Place: Sector 50, Noida, Uttar Pradesh 201301</p>
+    </section>
+
+    <!-- PDF Download Button -->
+    <a href="#" class="btn no-print" onclick="window.print();">Download PDF</a>
+    </div>
+
+  <!-- WhatsApp Contact Button -->
+  <a href="https://wa.me/+918756653868?text=Hii" class="whatsapp-btn no-print" target="_blank">&#x1F4AC;</a>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+      function downloadPDF() {
+        const element = document.getElementById("print");
+        const opt = {
+          margin: [10, 10, 10, 10],
+          filename: "dripar-resume.pdf",
+          image: {
+            type: "jpeg",
+            quality: 0.98,
+          },
+          html2canvas: {
+            scale: 2,
+          },
+          jsPDF: {
+            unit: "mm",
+            format: "a4",
+            orientation: "portrait",
+          },
+        };
+
+        html2pdf().set(opt).from(element).save();
+      }
+    </script> -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+</script>
+  </body>
+
+</html>
