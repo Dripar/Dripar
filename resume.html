@@ -590,35 +590,17 @@
     </section>
 
     <!-- PDF Download Button -->
-    <a href="#" class="btn no-print" onclick="window.print();">Download PDF</a>
+    <div class="no-print" style="text-align: center; margin: 20px 0;">
+      <a href="assets/Dripar_Gupta_Resume.pdf" download="Dripar_Gupta_Resume.pdf" class="btn" id="download-pdf-btn" 
+        style="background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);">
+        <i class="fas fa-file-pdf"></i> Download Resume PDF
+      </a>
+    </div>
     </div>
 
   <!-- WhatsApp Contact Button -->
   <a href="https://wa.me/+918756653868?text=Hii" class="whatsapp-btn no-print" target="_blank">&#x1F4AC;</a>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script>
-      function downloadPDF() {
-        const element = document.getElementById("print");
-        const opt = {
-          margin: [10, 10, 10, 10],
-          filename: "dripar-resume.pdf",
-          image: {
-            type: "jpeg",
-            quality: 0.98,
-          },
-          html2canvas: {
-            scale: 2,
-          },
-          jsPDF: {
-            unit: "mm",
-            format: "a4",
-            orientation: "portrait",
-          },
-        };
 
-        html2pdf().set(opt).from(element).save();
-      }
-    </script> -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
       AOS.init({
@@ -626,7 +608,7 @@
         once: true,
         offset: 100,
       });
-</script>
+  </script>
   </body>
 
 </html>
