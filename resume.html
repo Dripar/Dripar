@@ -2,232 +2,212 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Resume of Dripar Gupta" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume of Dripar Gupta">
   <title>Resume - Dripar Gupta</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
   <!-- AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 
   <style>
-    /* Base styles with CSS variables */
-    :root {
-      --primary-color: #2c3e50;
-      --secondary-color: #3498db;
-      --accent-color: #e74c3c;
-      --background-color: #f8f9fa;
-      --text-color: #2c3e50;
-      --section-bg: #ffffff;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
-    /* Responsive typography using clamp */
-    html {
-      font-size: clamp(14px, 2vw, 16px);
-      scroll-behavior: smooth;
+    :root {
+      --text-color: #333;
+      --heading-color: #000;
+      --bg-color: #d8e2e9;
+      --paper-color: #fff;
+      --divider-color: #ccc;
     }
 
     body {
-      font-family: "Poppins", sans-serif;
-      line-height: 1.8;
-      margin: 0;
-      padding: 0;
-      background: var(--background-color);
+      font-family: 'Inter', sans-serif;
       color: var(--text-color);
-      overflow-x: hidden;
+      background: var(--bg-color);
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px 0;
+      font-size: 13.5px;
     }
 
-    /* Container with responsive padding */
     .container {
-      width: min(1200px, 95%);
-      margin: clamp(1rem, 3vw, 2rem) auto;
-      padding: clamp(1rem, 3vw, 2rem);
-      background: var(--section-bg);
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--paper-color);
+      padding: 60px 80px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
 
-    /* Responsive header */
+    /* Typography */
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      margin: 0;
+    }
+
     header {
-      background: linear-gradient(135deg, #2c3e50, #3498db);
-      color: white;
-      padding: 1.5rem 1rem;
       text-align: center;
-      border-radius: 15px;
-      margin-bottom: 1rem;
+      margin-bottom: 30px;
     }
 
     header h1 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: 1px;
+      font-weight: 300;
+      font-size: 32px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--heading-color);
+      margin-bottom: 5px;
     }
 
-    header h3,
-    header h4 {
-      font-size: clamp(1rem, 2vw, 1.4rem);
-      margin: 0.5rem 0;
+    header .title {
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 12px;
     }
 
-    /* Responsive sections */
+    header .contact-info {
+      font-size: 11px;
+      color: #555;
+    }
+
+    header .contact-info a {
+      color: #555;
+      text-decoration: none;
+    }
+
     section {
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 10px;
-      border-bottom: 1px solid #eee;
+      margin-bottom: 25px;
     }
 
     section h2 {
-      font-size: clamp(1.4rem, 3vw, 1.8rem);
-      padding-bottom: clamp(0.5rem, 2vw, 0.8rem);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--heading-color);
+      margin: 30px 0 15px 0;
     }
 
-    /* Responsive table */
-    .responsive-table {
-      width: 100%;
-      overflow-x: auto;
-      display: block;
+    /* Experience & Education & Projects */
+    .item-title {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--heading-color);
+      margin-top: 15px;
+    }
+
+    .item-meta {
+      font-size: 12px;
+      font-style: italic;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 5px 0 15px 0;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    /* Skills & other text sections */
+    p,
+    li {
+      font-size: 12px;
+      color: #444;
+      text-align: justify;
+    }
+
+    .skill-line {
+      text-align: center;
+      margin-bottom: 15px;
+      line-height: 2;
+    }
+
+    /* Utilities */
+    .no-print {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .btn {
+      background: #444 !important;
+      color: #fff !important;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      font-family: inherit;
+      box-shadow: none !important;
+    }
+
+    .btn:hover {
+      background: #000 !important;
     }
 
     @media screen and (max-width: 768px) {
-      .responsive-table table {
-        min-width: 600px;
-      }
-
-      .responsive-table td,
-      .responsive-table th {
-        padding: 8px;
-        font-size: 0.9rem;
-      }
-    }
-
-    /* Responsive skills section */
-    .skill-tag {
-      font-size: clamp(0.8rem, 1.5vw, 0.9rem);
-      padding: clamp(4px, 1vw, 8px) clamp(10px, 2vw, 15px);
-      margin: clamp(3px, 1vw, 5px);
-    }
-
-    /* Responsive buttons */
-    .btn {
-      padding: clamp(8px, 2vw, 12px) clamp(15px, 3vw, 25px);
-      font-size: clamp(0.9rem, 2vw, 1rem);
-    }
-
-    .whatsapp-btn {
-      width: clamp(45px, 8vw, 60px);
-      height: clamp(45px, 8vw, 60px);
-      bottom: clamp(20px, 4vw, 30px);
-      right: clamp(20px, 4vw, 30px);
-      font-size: clamp(1.4rem, 3vw, 1.8rem);
-    }
-
-    /* Mobile-specific styles */
-    @media screen and (max-width: 480px) {
       .container {
-        width: 100%;
+        padding: 30px;
         margin: 0;
-        border-radius: 0;
-        padding: 1rem;
-      }
-
-      section {
-        padding: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      ul {
-        padding-left: 1rem;
-      }
-
-      li {
-        margin-bottom: 0.8rem;
-      }
-
-      .contact-info a {
-        display: block;
-        margin: 5px 0;
+        width: 100%;
+        box-sizing: border-box;
       }
     }
 
-    /* Tablet-specific styles */
-    @media screen and (min-width: 481px) and (max-width: 768px) {
-      .container {
-        width: 90%;
-        margin: 1rem auto;
-      }
-    }
-
-    /* Print styles */
     @media print {
       body {
-        background: white;
+        background: #fff;
+        padding: 0;
+        -webkit-print-color-adjust: exact;
       }
 
       .container {
-        width: 100%;
-        margin: 0;
-        padding: 0;
         box-shadow: none;
+        padding: 0;
+        max-width: 100%;
       }
 
       .no-print {
         display: none !important;
       }
-
-      section {
-        break-inside: avoid;
-      }
-    }
-
-    /* Progressive enhancement */
-    @supports (display: grid) {
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
-      }
     }
   </style>
 
   <!-- Add viewport meta tag if not present -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
 
 <body>
-  <header>
-    <h1>Dripar Gupta</h1>
-    <h3 style="margin: -4px">Software Engineer</h3>
-    <h4 style="margin: -4px">
-      PHP (Laravel) Developer | Application Development | REST APIs
-    </h4>
-    <div class="no-print" style="margin-top: 15px;">
-      <a href="index.html" style="background: white; color: #2c3e50; padding: 5px 15px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.9rem; border: 1px solid #2c3e50;">View My Portfolio</a>
-    </div>
-  </header>
-
   <div class="container">
-    <section id="contact-info">
-      <h2>Contact Information</h2>
-      <p style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; line-height: 1.6;">
-        <span><strong>Address:</strong> Noida, Uttar Pradesh 201301</span>
-        <span><strong>Contact:</strong> <a href="tel:8756653868" style="color: #333">8756653868</a></span>
-        <span><strong>Email:</strong> <a href="mailto:gd875665@gmail.com">gd875665@gmail.com</a></span>
-        <span><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/dripar" target="_blank">Profile</a></span>
-        <span><strong>Portfolio:</strong> <a href="https://dripar.github.io/Dripar/" target="_blank">Link</a></span>
-      </p>
-    </section>
+    <header>
+      <h1>DRIPAR GUPTA</h1>
+      <p class="title">Software Engineer</p>
+      <p class="contact-info">gd875665@gmail.com &nbsp;|&nbsp; +91 8756653868 &nbsp;|&nbsp; <a
+          href="https://linkedin.com/in/dripar">linkedin.com/in/dripar</a> &nbsp;|&nbsp; <a
+          href="https://dripar.github.io/Dripar/">dripar.github.io/Dripar/</a></p>
+    </header>
     <!-- Professional Summary Section -->
     <section id="professional-summary">
       <h2>Professional Summary</h2>
       <p>
-        Software Engineer with 3.5+ years of experience in PHP (Laravel) specializing in application development, REST APIs,
-        and scalable backend systems. Experienced in coding, debugging, testing, and deploying web applications on cloud/VPS environments. 
+        Software Engineer with 3.5+ years of experience in PHP (Laravel) specializing in application development, REST
+        APIs,
+        and scalable backend systems. Experienced in coding, debugging, testing, and deploying web applications on
+        cloud/VPS environments.
         Advanced expertise in AI-driven development and the full Software Development Lifecycle (SDLC).
       </p>
     </section>
@@ -235,30 +215,21 @@
     <!-- Education Section -->
     <section id="education">
       <h2>Education</h2>
-      <div class="education-item">
-        <h3 style="margin-bottom: 5px;">Master of Computer Applications (MCA)</h3>
-        <p style="margin: 0;"><strong>Mangalayatan University</strong> | 2024</p>
-        <p style="margin: 0;">Percentage: 71%</p>
+      <div class="">
+        <div class="item-meta">Master of Computer Applications (MCA) - Mangalayatan University | 2024 (Percentage: 71%)
+        </div>
       </div>
-      <div class="education-item" style="margin-top: 15px;">
-        <h3 style="margin-bottom: 5px;">PGDCA</h3>
-        <p style="margin: 0;"><strong>Subharti University</strong> | 2021</p>
-        <p style="margin: 0;">Percentage: 65%</p>
+      <div class="">
+        <div class="item-meta">PGDCA - Subharti University | 2021 (Percentage: 65%)</div>
       </div>
-      <div class="education-item" style="margin-top: 15px;">
-        <h3 style="margin-bottom: 5px;">Bachelor's Degree (Graduation)</h3>
-        <p style="margin: 0;"><strong>State University</strong> | 2020</p>
-        <p style="margin: 0;">Percentage: 52%</p>
+      <div class="">
+        <div class="item-meta">Bachelor's Degree (Graduation) - State University | 2020 (Percentage: 52%)</div>
       </div>
-      <div class="education-item" style="margin-top: 15px;">
-        <h3 style="margin-bottom: 5px;">Senior Secondary (12th)</h3>
-        <p style="margin: 0;"><strong>UP Board</strong> | 2017</p>
-        <p style="margin: 0;">Percentage: 70%</p>
+      <div class="">
+        <div class="item-meta">Senior Secondary (12th) - UP Board | 2017 (Percentage: 70%)</div>
       </div>
-      <div class="education-item" style="margin-top: 15px;">
-        <h3 style="margin-bottom: 5px;">Secondary (10th)</h3>
-        <p style="margin: 0;"><strong>UP Board</strong> | 2015</p>
-        <p style="margin: 0;">Percentage: 72.5%</p>
+      <div class="">
+        <div class="item-meta">Secondary (10th) - UP Board | 2015 (Percentage: 72.5%)</div>
       </div>
     </section>
 
@@ -267,31 +238,44 @@
       <h2>Technical Skills</h2>
       <ul>
         <li>
-          <strong>Languages & Frameworks</strong>: PHP (Laravel), JavaScript (Vue.js, Node.js), Python (Django), C
+          <strong style="font-weight: 500;">Languages &amp; Frameworks</strong>: PHP (Laravel), JavaScript (Vue.js,
+          Node.js),
+          Python (Django), C
         </li>
         <li>
-          <strong>Web Technologies</strong>: HTML5, CSS3, AJAX, JSON, REST APIs, Bootstrap, Responsive Design, Payment Gateways
+          <strong style="font-weight: 500;">Web Technologies</strong>: HTML5, CSS3, AJAX, JSON, REST APIs, Bootstrap,
+          Responsive
+          Design, Payment Gateways
           (Razorpay), Shipping APIs (Shiprocket)
         </li>
         <li>
-          <strong>Tools & Databases</strong>: Git, GitHub, Bitbucket, Postman, MySQL, Data Structures
+          <strong style="font-weight: 500;">Tools &amp; Databases</strong>: Git, GitHub, Bitbucket, Postman, MySQL, Data
+          Structures
         </li>
         <li>
-          <strong>Cloud & DevOps</strong>: Basic AWS (S3, EC2), DigitalOcean, VPS Deployment, Docker, CPanel, Release Management
+          <strong style="font-weight: 500;">Cloud &amp; DevOps</strong>: Basic AWS (S3, EC2), DigitalOcean, VPS
+          Deployment,
+          Docker, CPanel, Release Management
         </li>
         <li>
-          <strong>Core Concepts</strong>: SDLC (Software Development Lifecycle), OOP, MVC, Application Development, Unit Testing
+          <strong style="font-weight: 500;">Core Concepts</strong>: SDLC (Software Development Lifecycle), OOP, MVC,
+          Application
+          Development, Unit Testing
           (PHPUnit), Integration, Debugging, Technical Support
         </li>
         <li>
-          <strong>SaaS Solutions</strong>: Experience in building and maintaining SaaS-based package solutions and scalable
+          <strong style="font-weight: 500;">SaaS Solutions</strong>: Experience in building and maintaining SaaS-based
+          package
+          solutions and scalable
           architectures
         </li>
         <li>
-          <strong>AI & Machine Learning Integration</strong>: OpenAI API (GPT), Gemini API (Google), Claude API (Anthropic), Prompt Engineering, RAG (Retrieval-Augmented Generation)
+          <strong style="font-weight: 500;">AI &amp; Machine Learning Integration</strong>: OpenAI API (GPT), Gemini API
+          (Google),
+          Claude API (Anthropic), Prompt Engineering, RAG (Retrieval-Augmented Generation)
         </li>
         <li>
-          <strong>AI Developer Tools</strong>: GitHub Copilot, Cursor AI, ChatGPT, Midjourney
+          <strong style="font-weight: 500;">AI Developer Tools</strong>: GitHub Copilot, Cursor AI, ChatGPT, Midjourney
         </li>
       </ul>
     </section>
@@ -307,48 +291,49 @@
       <h2>PROJECT WORK</h2>
       <ul>
         <li>
-          <strong>UnoPim (Product Information Management)</strong>: Specialized in centralizing, managing, and enriching product
+          <strong>UnoPim (Product Information Management)</strong>: Specialized in centralizing, managing, and enriching
+          product
           data across multiple channels. Managed complex product catalogs, attributes, and categories for multichannel
           distribution.
-          </li>
-          <li>
-            <strong>Bagisto (E-commerce Framework)</strong>: Developed custom packages and integrated flexible payment and
-            shipping providers into the Laravel-based e-commerce platform to streamline order fulfillment.
-          </li>
-          <li>
-            <strong>Collage Management (Student Data)</strong> web application
-            in PHP.
-          </li>
-          <li>
-            <strong>Login Model (PHP)</strong>: Implemented a login system in
-            PHP with support for multiple login models.
-          </li>
-          <li>
-            <strong>Parent-Teacher Communication and Activity Tracker</strong>
-          </li>
-          <li><strong>Doctor-Patient Communication Tool</strong></li>
-          <li>
-            <strong>Kanram Academy</strong>: Developed a web application using
-            Laravel for managing student data and blog posts. Implemented a blog
-            section in the admin dashboard for easy content management.
-          </li>
-          <li>
-            <strong>SeedTree Admin Dashboard</strong>: Created and currently
-            maintaining an admin dashboard using Laravel, facilitating efficient
-            project management and data handling.
-          </li>
-          <li>
-            <strong>E-Commerce:</strong> Developed a robust e-commerce platform
-            with features like product management, payment gateway integration,
-            and user-friendly interface.
-          </li>
-          <li>
-            <strong>HRMS:</strong> Developed a comprehensive Human Resource
-            Management System for managing employee data, payroll, leaves, and
-            performance tracking.
-          </li>
-          </ul>
-          </section>
+        </li>
+        <li>
+          <strong>Bagisto (E-commerce Framework)</strong>: Developed custom packages and integrated flexible payment and
+          shipping providers into the Laravel-based e-commerce platform to streamline order fulfillment.
+        </li>
+        <li>
+          <strong>Collage Management (Student Data)</strong> web application
+          in PHP.
+        </li>
+        <li>
+          <strong>Login Model (PHP)</strong>: Implemented a login system in
+          PHP with support for multiple login models.
+        </li>
+        <li>
+          <strong>Parent-Teacher Communication and Activity Tracker</strong>
+        </li>
+        <li><strong>Doctor-Patient Communication Tool</strong></li>
+        <li>
+          <strong>Kanram Academy</strong>: Developed a web application using
+          Laravel for managing student data and blog posts. Implemented a blog
+          section in the admin dashboard for easy content management.
+        </li>
+        <li>
+          <strong>SeedTree Admin Dashboard</strong>: Created and currently
+          maintaining an admin dashboard using Laravel, facilitating efficient
+          project management and data handling.
+        </li>
+        <li>
+          <strong>E-Commerce:</strong> Developed a robust e-commerce platform
+          with features like product management, payment gateway integration,
+          and user-friendly interface.
+        </li>
+        <li>
+          <strong>HRMS:</strong> Developed a comprehensive Human Resource
+          Management System for managing employee data, payroll, leaves, and
+          performance tracking.
+        </li>
+      </ul>
+    </section>
 
     <!-- API Work Section -->
     <section id="api-work">
@@ -397,9 +382,9 @@
               compliance with security standards, enhancing user trust and
               facilitating reliable payments on the platform.
             </li>
-            </ul>
-            </li>
-            </ul>
+          </ul>
+        </li>
+      </ul>
 
       <ul>
         <li><strong>APIs Created for app</strong></li>
@@ -418,135 +403,70 @@
           </li>
         </ul>
       </ul>
-      </section>
+    </section>
 
     <!-- Work Experience Section -->
     <section id="work-experience">
       <h2>EXPERIENCE</h2>
+      <div class="item-title">Software Engineer</div>
+      <div class="item-meta">Webkul / January 2025 - Present (Noida, Uttar Pradesh, India)</div>
       <ul>
-        <li>
-          <strong>Company Name:</strong> Webkul
-          <br />
-          <strong>Position Held:</strong> Software Engineer
-          <br />
-          <strong>Duration:</strong> Present
-          <br />
-          <strong>Project Involvement and Accomplishments:</strong>
-          <ul>
-            <li>Developed and maintained scalable web applications using Laravel.</li>
-            <li>Designed and integrated REST APIs for frontend and third-party services.</li>
-            <li>
-              <strong>PIM & E-commerce Solutions:</strong> Conceptualizing and developing backend solutions for
-              SaaS-based E-commerce and PIM systems.
-              <ul>
-                <li>Expertise in <strong>Akeneo</strong>, <strong>UnoPim</strong>, and <strong>Bagisto</strong>.</li>
-                <li>Developing scalable modules, package-based solutions, and API integrations.</li>
-                <li>Performed API testing using Postman to ensure robust service integration.</li>
-              </ul>
-            </li>
-            </ul>
-            </li>
-
-        <li>
-          <strong>Company Name:</strong> LOCGFX PRIVATE LIMITED
-          <br />
-          <strong>Position Held:</strong> Backend Developer
-          <br />
-          <strong>Duration:</strong> September 2022 to November 2023
-          <br />
-          <strong>Project Involvement and Accomplishments:</strong>
-          <ul>
-            <li>Developed and integrated REST APIs for SaaS applications.</li>
-            <li>Debugged and resolved critical application issues to improve system performance.</li>
-            <li>
-              Below are the projects I worked on:
-              <ol>
-                <li>
-                  <strong>Kidseau:</strong> Developed the API and a comprehensive admin
-                  dashboard with multi-login support for a SaaS-based communication tool.
-                  Features like real-time messaging and data management were implemented.
-                  Learn more at: <a href="https://kidseau.com" target="_blank">https://kidseau.com</a>
-                  </li>
-                  <li>
-                  <strong>Ataraxis:</strong> Collaborated on a Tele-health SaaS platform, developing a
-                  video call and appointment booking system for doctors and patients.
-                  More details: <a href="http://www.theataraxis.com/" target="_blank">http://www.theataraxis.com/</a>
-                  </li>
-                  <li>
-                  <strong>SeedTree:</strong> Streamlined processes by implementing digital solutions for
-                  project management, ensuring a seamless user experience.
-                  Learn more: <a href="https://www.seedtree.in/" target="_blank">https://www.seedtree.in/</a>
-                  </li>
-                  </ol>
-                  </li>
-                  </ul>
-                  </li>
-
-        <li>
-          <strong>Company Name:</strong> NDMEAA (A.A.P.S Ecommerce World Pvt
-          Ltd)
-          <br />
-          <strong>Position Held:</strong> Backend Developer (PHP Laravel)
-          <br />
-          <strong>Duration:</strong> November 2023 to May 2024
-          <br />
-          <strong>Project Involvement and Accomplishments:</strong>
-          <ul>
-            <li>
-              <strong>Fantasy App Project:</strong> Led the development of a
-              fantasy app using PHP Laravel, focusing on backend functionality
-              to ensure a smooth and engaging user experience. Further details
-              to be shared soon. You can learn more at:
-              <a href="https://googly11.in/" target="_blank">googly11.in</a>
-            </li>
-          </ul>
+        <li>Conceptualizing and developing scalable backend solutions for SaaS-based E-commerce and PIM systems.</li>
+        <li>Specialized in centralizing, managing, and enriching product data across multiple channels (Akeneo, UnoPim,
+          Bagisto).</li>
+        <li>Designed and integrated REST APIs and custom package-based solutions for flexible payment and shipping
+          providers.
         </li>
-        <li>
-          <strong>Company Name</strong>: Alobha Technologies Pvt. Ltd
-          <br />
-          <strong>Position Held</strong>: Backend Developer (PHP Laravel)
-          <br />
-          <strong>Duration</strong>: June 2024 to present
-          <br />
-          <strong>Project Involvement and Accomplishments</strong>:
-          <ul>
-            <li>Deploys and maintains applications on cloud/VPS environments (AWS, DigitalOcean).</li>
-            <li>Implements basic unit testing (PHPUnit) and integration testing for all core features.</li>
-            <li>
-              <h3>E-commerce SaaS Platform (Styliv)</h3>
-              Developed a multi-vendor e-commerce platform using PHP Laravel, focusing on
-              scalable backend architectures and seamless integration.
-              <ul>
-                <li>Implemented product, category, and order management in the admin panel.</li>
-                <li>Integrated <strong>Razorpay Payment Gateway</strong> and <strong>Shiprocket</strong> for secure payments and
-                  automated shipping.</li>
-                <li>Developed user and vendor dashboards with email/SMS notification features.</li>
-              </ul>
-              <strong>Live Project:</strong> <a href="https://styliv.in">Styliv</a>
-            </li>
-            <li>
-              <h3>Human Resource Management System (HRMS)</h3>
-              Designed and implemented a comprehensive SaaS-based HR management system using the full SDLC.
-              <ul>
-                <li>Managed employee data (salary, leaves, attendance) and automated payslip generation.</li>
-                <li>Streamlined recruitment processes, onboarding, and performance tracking.</li>
-                <li>Added leave management with multi-level approval workflows.</li>
-                </ul>
-                </li>
-                </ul>
-                </li>
-                </ul>
-        </section>
-        
-        <!-- Certifications Section -->
-        <section id="certifications">
-          <h2>Certifications & Learning</h2>
-          <ul>
-            <li><strong>PHP (Laravel) Certification</strong> - Global Certification in Application Development</li>
-            <li><strong>REST API Design & Integration</strong> - Advanced Web Services Specialist</li>
-            <li><strong>Cloud Foundations (AWS)</strong> - Basic Proficiency in Cloud Deployment</li>
-          </ul>
-        </section>
+        <li>Performed robust API testing using Postman to ensure seamless service integration and high availability.
+        </li>
+      </ul>
+
+      <div class="item-title">Back End Developer</div>
+      <div class="item-meta">Alobha Technologies Pvt. Ltd / June 2024 - December 2024 (Noida, Uttar Pradesh, India)
+      </div>
+      <ul>
+        <li>Developed a multi-vendor E-commerce platform (Styliv) with integrated Razorpay and Shiprocket, focusing on
+          scalable
+          backend architectures.</li>
+        <li>Designed and implemented a comprehensive SaaS-based Human Resource Management System (HRMS) handling
+          employee data,
+          payroll automation, and multi-level leave approvals.</li>
+        <li>Deployed and maintained applications on cloud/VPS environments (AWS, DigitalOcean).</li>
+        <li>Implemented basic unit testing (PHPUnit) and integration testing for core features.</li>
+      </ul>
+
+      <div class="item-title">Back End Developer</div>
+      <div class="item-meta">NDMEAA (A.A.P.S Ecommerce World Pvt Ltd) / November 2023 - May 2024 (Lucknow, Uttar
+        Pradesh,
+        India)</div>
+      <ul>
+        <li>Led the backend development of "Googly11", a fantasy cricket app using PHP Laravel.</li>
+        <li>Integrated Rapid API for real-time live match scores, player statistics, and team performance tracking.</li>
+        <li>Developed scalable APIs to allow high-concurrency users to reliably create teams and join live contests.
+        </li>
+      </ul>
+      <div class="item-title">Back End Developer</div>
+      <div class="item-meta">Locgfx / September 2022 - November 2023 (New Delhi, Delhi, India)</div>
+      <ul>
+        <li>Developed APIs and comprehensive admin dashboards with multi-login support for SaaS communication tools like
+          "Kidseau".</li>
+        <li>Collaborated on "Ataraxis", a Tele-health SaaS platform, implementing video calling and appointment booking
+          systems.
+        </li>
+        <li>Streamlined processes by delivering digital solutions for "SeedTree" project management module.</li>
+        <li>Debugged and resolved critical backend issues to improve overall system performance and stability.</li>
+      </ul>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+      <h2>Certifications &amp; Learning</h2>
+      <ul>
+        <li><strong>PHP (Laravel) Certification</strong> - Global Certification in Application Development</li>
+        <li><strong>REST API Design &amp; Integration</strong> - Advanced Web Services Specialist</li>
+        <li><strong>Cloud Foundations (AWS)</strong> - Basic Proficiency in Cloud Deployment</li>
+      </ul>
+    </section>
 
     <!-- Personal Profile Section -->
     <section id="personal-profile">
@@ -591,24 +511,24 @@
 
     <!-- PDF Download Button -->
     <div class="no-print" style="text-align: center; margin: 20px 0;">
-      <a href="assets/Dripar_Gupta_Resume.pdf" download="Dripar_Gupta_Resume.pdf" class="btn" id="download-pdf-btn" 
+      <a href="assets/Dripar_Gupta_Resume.pdf" download="Dripar_Gupta_Resume.pdf" class="btn" id="download-pdf-btn"
         style="background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);">
         <i class="fas fa-file-pdf"></i> Download Resume PDF
       </a>
     </div>
-    </div>
+  </div>
 
   <!-- WhatsApp Contact Button -->
-  <a href="https://wa.me/+918756653868?text=Hii" class="whatsapp-btn no-print" target="_blank">&#x1F4AC;</a>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-      });
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
   </script>
-  </body>
+
+
+</body>
 
 </html>
