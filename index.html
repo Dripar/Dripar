@@ -1,167 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dripar Gupta - Portfolio</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Particle.js -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  </head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dripar Gupta - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Particle.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    </head>
 <body>
-  <!-- Particle Background -->
-  <div id="particles-js"></div>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
 
-  <!-- Navigation -->
-  <nav class="nav-container">
-    <div class="nav-content">
-      <div class="logo">DG</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="resume.html" class="resume-nav-link"
-            style="color: var(--secondary-color); font-weight: 700;">Resume</a></li>
-        <!-- Theme Switcher -->
-        <li class="theme-switch-wrapper">
-          <button id="theme-toggle-btn" aria-label="Toggle Theme">
-            <i class="fas fa-desktop"></i>
-          </button>
-          <div class="theme-dropdown">
-            <button data-theme="light"><i class="fas fa-sun"></i> Light</button>
-            <button data-theme="dark"><i class="fas fa-moon"></i> Dark</button>
-            <button data-theme="system"><i class="fas fa-desktop"></i> System</button>
-          </div>
-        </li>
-      </ul>
-      <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-    </div>
-  </nav>
-  
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content" data-aos="fade-up">
-      <h1 class="glitch" data-text="Dripar Gupta">Dripar Gupta</h1>
-      <p class="typewriter">Software Engineer</p>
-      <p class="hero-subtitle">Engineering efficient, scalable, and secure backend solutions.</p>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/dripar-g-6119631b5/" target="_blank" title="LinkedIn"><i
-            class="fab fa-linkedin"></i></a>
-        <a href="mailto:gd875665@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://wa.me/+918756653868?text=Hi" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://github.com/Dripar" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <!-- Navigation -->
+    <nav class="nav-container">
+      <div class="nav-content">
+        <div class="logo">DG</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="resume.html" class="resume-nav-link"
+              style="color: var(--secondary-color); font-weight: 700;">Resume</a></li>
+          <!-- Theme Switcher -->
+          <li class="theme-switch-wrapper">
+            <button id="theme-toggle-btn" aria-label="Toggle Theme">
+              <i class="fas fa-desktop"></i>
+            </button>
+            <div class="theme-dropdown">
+              <button data-theme="light"><i class="fas fa-sun"></i> Light</button>
+              <button data-theme="dark"><i class="fas fa-moon"></i> Dark</button>
+              <button data-theme="system"><i class="fas fa-desktop"></i> System</button>
+            </div>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
-        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-        <a href="resume.html" class="btn"
-          style="border: 2px solid var(--secondary-color); color: var(--secondary-color); background: transparent; backdrop-filter: blur(5px);">View
-          Full CV</a>
       </div>
-    </div>
-  </section>
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">About Me</h2>
-      <div class="about-content" data-aos="fade-up" data-aos-delay="100">
-        <div class="about-text">
-          <p>
-            Software Engineer with 3.5+ years of experience in PHP (Laravel) specializing in application development,
-            REST APIs, and
-            scalable backend systems. Experienced in coding, debugging, testing, and deploying web applications on
-            cloud/VPS
-            environments. Proven track record in the full Software Development Lifecycle (SDLC), from initial design to
-            release
-            management and technical support.
-            </p>
-            <div class="info-grid">
-              <div class="info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Noida, Uttar Pradesh</span>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-phone"></i>
-                <span>+91 8756653868</span>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <span>gd875665@gmail.com</span>
-              </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </section>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content" data-aos="fade-up">
+        <h1 class="glitch" data-text="Dripar Gupta">Dripar Gupta</h1>
+        <p class="typewriter">Software Engineer</p>
+        <p class="hero-subtitle">Engineering efficient, scalable, and secure backend solutions.</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/dripar-g-6119631b5/" target="_blank" title="LinkedIn"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="mailto:gd875665@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/+918756653868?text=Hi" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://github.com/Dripar" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="resume.html" class="btn"
+            style="border: 2px solid var(--secondary-color); color: var(--secondary-color); background: transparent; backdrop-filter: blur(5px);">View
+            Full CV</a>
+        </div>
+        </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="section">
+          <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+              <div class="about-text">
+                <p>
+                        Software Engineer with 3.5+ years of experience in PHP (Laravel) specializing in application development, REST APIs, and
+                        scalable backend systems. Experienced in coding, debugging, testing, and deploying web applications on cloud/VPS
+                        environments. Proven track record in the full Software Development Lifecycle (SDLC), from initial design to release
+                        management and technical support.
+                        </p>
+                        <div class="info-grid">
+                          <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Noida, Uttar Pradesh</span>
+                          </div>
+                          <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8756653868</span>
+                          </div>
+                          <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>gd875665@gmail.com</span>
+                          </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-          <h3><i class="fas fa-code"></i> Languages & Frameworks</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">Core PHP</span>
-            <span class="skill-tag">PHP (Laravel)</span>
-            <span class="skill-tag">JavaScript (Vue.js, Node.js)</span>
-            <span class="skill-tag">Python (Django)</span>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <h3><i class="fas fa-code"></i> Languages & Frameworks</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Core PHP</span>
+              <span class="skill-tag">PHP (Laravel)</span>
+              <span class="skill-tag">JavaScript (Vue.js, Node.js)</span>
+              <span class="skill-tag">Python (Django)</span>
+            </div>
           </div>
-        </div>
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-          <h3><i class="fas fa-laptop-code"></i> Web Technologies</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">HTML5/CSS3</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">AJAX/JSON</span>
-            <span class="skill-tag">Bootstrap</span>
-            <span class="skill-tag">PIM Systems</span>
-            <span class="skill-tag">Payment Gateways</span>
-            <span class="skill-tag">Shipping APIs</span>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <h3><i class="fas fa-laptop-code"></i> Web Technologies</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5/CSS3</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">AJAX/JSON</span>
+              <span class="skill-tag">Bootstrap</span>
+              <span class="skill-tag">PIM Systems</span>
+              <span class="skill-tag">Payment Gateways</span>
+              <span class="skill-tag">Shipping APIs</span>
+            </div>
           </div>
-        </div>
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-          <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">AWS (S3, EC2)</span>
-            <span class="skill-tag">DigitalOcean</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">Git/GitHub</span>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">AWS (S3, EC2)</span>
+              <span class="skill-tag">DigitalOcean</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Git/GitHub</span>
+            </div>
           </div>
-        </div>
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-          <h3><i class="fas fa-gear"></i> Core Concepts</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">SDLC</span>
-            <span class="skill-tag">Unit Testing (PHPUnit)</span>
-            <span class="skill-tag">Debugging</span>
-            <span class="skill-tag">SaaS Architectures</span>
-            <span class="skill-tag">Postman</span>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+            <h3><i class="fas fa-gear"></i> Core Concepts</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">SDLC</span>
+              <span class="skill-tag">Unit Testing (PHPUnit)</span>
+              <span class="skill-tag">Debugging</span>
+              <span class="skill-tag">SaaS Architectures</span>
+              <span class="skill-tag">Postman</span>
+            </div>
           </div>
-        </div>
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
-          <h3><i class="fas fa-robot"></i> AI & Innovation</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">OpenAI/Gemini APIs</span>
-            <span class="skill-tag">Prompt Engineering</span>
-            <span class="skill-tag">Cursor AI</span>
-            <span class="skill-tag">GitHub Copilot</span>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+            <h3><i class="fas fa-robot"></i> AI & Innovation</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">OpenAI/Gemini APIs</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Cursor AI</span>
+              <span class="skill-tag">GitHub Copilot</span>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Experience</h2>
+        <div class="timeline">
+          <!-- Experience Item 0 (Current) -->
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-content">
+              <span class="date">Present</span>
+              <h3>Software Engineer</h3>
+              <h4>Webkul</h4>
+              <p>Developing scalable backend solutions for SaaS-based E-commerce and PIM systems.</p>
+              <ul>
+                <li>Expertise in <strong>Akeneo</strong>, <strong>UnoPim</strong>, and <strong>Bagisto</strong>.</li>
+                <li>Designed and integrated REST APIs for frontend and third-party services.</li>
+                <li>Performed API testing using Postman to ensure robust service integration.</li>
+              </ul>
+            </div>
           </div>
-<<<<<<< Updated upstream
+          <!-- Experience Item 1 -->
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-content">
+              <span class="date">June 2024 - Present</span>
+              <h3>Backend Developer (PHP Laravel)</h3>
+              <h4>Alobha Technologies Pvt. Ltd</h4>
+              <p>Leading development of scalable e-commerce and HRMS SaaS platforms.</p>
+              <ul>
+                <li>Implemented basic unit testing (PHPUnit) and integration testing for core features.</li>
+                            <li>Developed <strong>Styliv</strong> e-commerce platform with automated shipping (Shiprocket) and payment (Razorpay).
+                            </li>
+                            <li>Designed and implemented a comprehensive SaaS-based HRMS using the full SDLC.</li>
+                            <li>Deploys and maintains applications on cloud environments (AWS, DigitalOcean).</li>
+                            </ul>
+                            </div>
+                            </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item" data-aos="fade-right">
+                  <div class="timeline-content">
+                    <span class="date">Nov 2023 - May 2024</span>
+                    <h3>Backend Developer (PHP Laravel)</h3>
+                    <h4>NDMEAA (A.A.P.S Ecommerce World Pvt Ltd)</h4>
+                    <ul>
+                            <li>Led the development of <strong>Googly11</strong> fantasy app backend with real-time API integrations.</li>
+                            <li>Ensured high performance and scalability for 10k+ concurrent users.</li>
+                            </ul>
+                            </div>
+                            </div>
+
+                <!-- Experience Item 3 -->
+                <div class="timeline-item" data-aos="fade-left">
+                  <div class="timeline-content">
+                    <span class="date">Sep 2022 - Nov 2023</span>
+                    <h3>Backend Developer</h3>
+                    <h4>LOCGFX PRIVATE LIMITED</h4>
+                    <ul>
+                      <li>Developed and integrated REST APIs for SaaS applications like <strong>Kidseau</strong> and
+                        <strong>Ataraxis</strong>.
+                      </li>
+                      <li>Debugged and resolved critical issues to improve system performance by 30%.</li>
+                      <li>Contributed to the success of digital solutions for <strong>Seedtree Collaborative</strong>.</li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+                </div>
+                </section>
+                <!-- Certifications Section -->
+                <section id="certifications" class="section">
+                  <div class="container">
+                    <h2 class="section-title" data-aos="fade-up">Certifications</h2>
+                    <div class="skills-grid">
+                      <div class="skill-category" data-aos="fade-up">
+                        <div class="skill-tags">
+                          <span class="skill-tag">PHP (Laravel) Certification</span>
+                          <span class="skill-tag">REST API Design & Integration</span>
+                          <span class="skill-tag">Cloud Foundations (AWS)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+        <div class="projects-grid">
+          <!-- Project: UnoPim -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="project-content">
+              <h3>UnoPim (PIM System)</h3>
+              <p>Specialized in centralizing and enriching product data. Managed complex catalogs and attributes for
+                multichannel distribution.</p>
+              <div class="project-tags">
+                <span>Laravel</span>
+                <span>PIM</span>
+                <span>Data Enrichment</span>
+              </div>
+              <a href="https://github.com/unopim/unopim" target="_blank" class="btn btn-sm">View Source</a>
+            </div>
+          </div>
           <!-- Project: Bagisto -->
           <div class="project-card" data-aos="fade-up" data-aos-delay="75">
             <div class="project-content">
@@ -201,305 +302,89 @@
                     <span>Real-time Data</span>
                   </div>
                   <a href="https://googly11.in/" target="_blank" class="btn btn-sm">View Live</a>
-                </div>
-              </div>
-              <!-- Project 3 -->
-              <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-content">
-                  <h3>Kidseau</h3>
-                  <p>School communication app facilitating parent-teacher interaction, daily activity tracking, and school
-                    feeds.</p>
-                  <div class="project-tags">
-                    <span>Node.js</span>
-                    <span>API Development</span>
-                    <span>Admin Panel</span>
                   </div>
-                  <a href="https://kidseau.com" target="_blank" class="btn btn-sm">View Live</a>
-                </div>
-              </div>
-              <!-- Project 4 -->
-              <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-content">
-                  <h3>HRMS System</h3>
+                  </div>
+                  <!-- Project 3 -->
+                  <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-content">
+                      <h3>Kidseau</h3>
+                      <p>School communication app facilitating parent-teacher interaction, daily activity tracking, and school
+                        feeds.</p>
+                      <div class="project-tags">
+                        <span>Node.js</span>
+                        <span>API Development</span>
+                        <span>Admin Panel</span>
+                      </div>
+                      <a href="https://kidseau.com" target="_blank" class="btn btn-sm">View Live</a>
+                    </div>
+                  </div>
+                  <!-- Project 4 -->
+                  <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-content">
+                      <h3>HRMS System</h3>
                   <p>Comprehensive Human Resource Management System for payroll, leave, attendance, and recruitment processes.</p>
                   <div class="project-tags">
                     <span>Laravel</span>
                     <span>Workflow Automation</span>
                     <span>Payroll</span>
                   </div>
-                </div>
-              </div>
-              <!-- Project 5 -->
-              <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-content">
-                  <h3>Seedtree Collaborative</h3>
-                  <p>Platform streamlining processes for clients and professionals with efficient project management.</p>
-                  <div class="project-tags">
-                    <span>Laravel</span>
-                    <span>Digital Solutions</span>
                   </div>
-                  <a href="https://www.seedtree.in/" target="_blank" class="btn btn-sm">View Live</a>
-                </div>
-              </div>
-              </div>
-              </div>
-    </section>
-    
-    <!-- Declaration Section -->
-    <section id="declaration">
-      <h2>Declaration</h2>
-      <p>
-        I hereby declare that the information provided is true to the best of
-        my knowledge and belief.
-      </p>
-      <p>
-        Date:
-        <script>
-          var date = new Date();
-          var day = String(date.getDate()).padStart(2, "0");
-          var month = String(date.getMonth() + 1).padStart(2, "0"); // Month is 0-based, so we add 1
-          var year = date.getFullYear();
-          document.write(day + "-" + month + "-" + year);
-        </script>
-      </p>
-      <p>Place: Sector 50, Noida, Uttar Pradesh 201301</p>
-    </section>
-=======
+                  </div>
+                  <!-- Project 5 -->
+                  <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-content">
+                      <h3>Seedtree Collaborative</h3>
+                      <p>Platform streamlining processes for clients and professionals with efficient project management.</p>
+                      <div class="project-tags">
+                        <span>Laravel</span>
+                        <span>Digital Solutions</span>
+                      </div>
+                      <a href="https://www.seedtree.in/" target="_blank" class="btn btn-sm">View Live</a>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                  </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+        <div class="contact-content" data-aos="zoom-in">
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Message" required rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
         </div>
       </div>
-    </div>
-  </section>
->>>>>>> Stashed changes
+    </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Experience</h2>
-      <div class="timeline">
-        <!-- Experience Item 0 (Current) -->
-        <div class="timeline-item" data-aos="fade-right">
-          <div class="timeline-content">
-            <span class="date">Present</span>
-            <h3>Software Engineer</h3>
-            <h4>Webkul</h4>
-            <p>Developing scalable backend solutions for SaaS-based E-commerce and PIM systems.</p>
-            <ul>
-              <li>Expertise in <strong>Akeneo</strong>, <strong>UnoPim</strong>, and <strong>Bagisto</strong>.</li>
-              <li>Designed and integrated REST APIs for frontend and third-party services.</li>
-              <li>Performed API testing using Postman to ensure robust service integration.</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Experience Item 1 -->
-        <div class="timeline-item" data-aos="fade-left">
-          <div class="timeline-content">
-            <span class="date">June 2024 - Present</span>
-            <h3>Backend Developer (PHP Laravel)</h3>
-            <h4>Alobha Technologies Pvt. Ltd</h4>
-            <p>Leading development of scalable e-commerce and HRMS SaaS platforms.</p>
-            <ul>
-              <li>Implemented basic unit testing (PHPUnit) and integration testing for core features.</li>
-              <li>Developed <strong>Styliv</strong> e-commerce platform with automated shipping (Shiprocket) and payment
-                (Razorpay).
-              </li>
-              <li>Designed and implemented a comprehensive SaaS-based HRMS using the full SDLC.</li>
-              <li>Deploys and maintains applications on cloud environments (AWS, DigitalOcean).</li>
-              </ul>
-              </div>
-              </div>
-
-        <!-- Experience Item 2 -->
-        <div class="timeline-item" data-aos="fade-right">
-          <div class="timeline-content">
-            <span class="date">Nov 2023 - May 2024</span>
-            <h3>Backend Developer (PHP Laravel)</h3>
-            <h4>NDMEAA (A.A.P.S Ecommerce World Pvt Ltd)</h4>
-            <ul>
-              <li>Led the development of <strong>Googly11</strong> fantasy app backend with real-time API integrations.
-              </li>
-              <li>Ensured high performance and scalability for 10k+ concurrent users.</li>
-              </ul>
-              </div>
-              </div>
-
-        <!-- Experience Item 3 -->
-        <div class="timeline-item" data-aos="fade-left">
-          <div class="timeline-content">
-            <span class="date">Sep 2022 - Nov 2023</span>
-            <h3>Backend Developer</h3>
-            <h4>LOCGFX PRIVATE LIMITED</h4>
-            <ul>
-              <li>Developed and integrated REST APIs for SaaS applications like <strong>Kidseau</strong> and
-                <strong>Ataraxis</strong>.
-              </li>
-              <li>Debugged and resolved critical issues to improve system performance by 30%.</li>
-              <li>Contributed to the success of digital solutions for <strong>Seedtree Collaborative</strong>.</li>
-            </ul>
-          </div>
-        </div>
-        </div>
-        </div>
-        </section>
-        <!-- Certifications Section -->
-        <section id="certifications" class="section">
-          <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Certifications</h2>
-            <div class="skills-grid">
-              <div class="skill-category" data-aos="fade-up">
-                <div class="skill-tags">
-                  <span class="skill-tag">PHP (Laravel) Certification</span>
-                  <span class="skill-tag">REST API Design & Integration</span>
-                  <span class="skill-tag">Cloud Foundations (AWS)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
-      <div class="projects-grid">
-        <!-- Project: UnoPim -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="50">
-          <div class="project-content">
-            <h3>UnoPim (PIM System)</h3>
-            <p>Specialized in centralizing and enriching product data. Managed complex catalogs and attributes for
-              multichannel distribution.</p>
-            <div class="project-tags">
-              <span>Laravel</span>
-              <span>PIM</span>
-              <span>Data Enrichment</span>
-            </div>
-            <a href="https://github.com/unopim/unopim" target="_blank" class="btn btn-sm">View Source</a>
-          </div>
-        </div>
-        <!-- Project: Bagisto -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="75">
-          <div class="project-content">
-            <h3>Bagisto Packages</h3>
-            <p>Developed custom packages for payment and shipping integrations in the Laravel-based e-commerce
-              ecosystem.
-            </p>
-            <div class="project-tags">
-              <span>Laravel</span>
-              <span>E-commerce</span>
-              <span>Package Dev</span>
-            </div>
-            <a href="https://github.com/bagisto/bagisto" target="_blank" class="btn btn-sm">View Source</a>
-            </div>
-            </div>
-            <!-- Project 1 -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-              <div class="project-content">
-                <h3>Styliv (E-commerce)</h3>
-                <p>A robust multi-vendor e-commerce platform with wallet system, rewards, and advanced order management.</p>
-                <div class="project-tags">
-                  <span>Laravel</span>
-                  <span>Razorpay</span>
-                  <span>Shiprocket</span>
-                </div>
-                <a href="https://styliv.in" target="_blank" class="btn btn-sm">View Live</a>
-              </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-              <div class="project-content">
-                <h3>Googly11 (Fantasy App)</h3>
-            <p>Backend for a fantasy cricket app allowing users to create teams, join contests, and track live scores
-              via
-              Rapid API.</p>
-            <div class="project-tags">
-              <span>Laravel</span>
-              <span>Rapid API</span>
-              <span>Real-time Data</span>
-            </div>
-            <a href="https://googly11.in/" target="_blank" class="btn btn-sm">View Live</a>
-            </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-              <div class="project-content">
-                <h3>Kidseau</h3>
-                <p>School communication app facilitating parent-teacher interaction, daily activity tracking, and school
-                  feeds.</p>
-                <div class="project-tags">
-                  <span>Node.js</span>
-                  <span>API Development</span>
-                  <span>Admin Panel</span>
-                </div>
-                <a href="https://kidseau.com" target="_blank" class="btn btn-sm">View Live</a>
-              </div>
-            </div>
-            <!-- Project 4 -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-              <div class="project-content">
-                <h3>HRMS System</h3>
-            <p>Comprehensive Human Resource Management System for payroll, leave, attendance, and recruitment processes.
-            </p>
-            <div class="project-tags">
-              <span>Laravel</span>
-              <span>Workflow Automation</span>
-              <span>Payroll</span>
-            </div>
-            </div>
-            </div>
-            <!-- Project 5 -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-              <div class="project-content">
-                <h3>Seedtree Collaborative</h3>
-                <p>Platform streamlining processes for clients and professionals with efficient project management.</p>
-                <div class="project-tags">
-                  <span>Laravel</span>
-                  <span>Digital Solutions</span>
-                </div>
-                <a href="https://www.seedtree.in/" target="_blank" class="btn btn-sm">View Live</a>
-              </div>
-            </div>
-            </div>
-            </div>
-            </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
-      <div class="contact-content" data-aos="zoom-in">
-        <form id="contact-form">
-          <div class="form-group">
-            <input type="text" placeholder="Name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Email" required>
-          </div>
-          <div class="form-group">
-            <textarea placeholder="Message" required rows="5"></textarea>
-          </div>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; <span id="year"></span> Dripar Gupta. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/dripar-g-6119631b5/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:gd875665@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; <span id="year"></span> Dripar Gupta. All rights reserved.</p>
-    <div class="footer-socials">
-      <a href="https://linkedin.com/in/dripar-g-6119631b5/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:gd875665@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-  </footer>
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>    OS.init({
-      ation: 1000,
-      true
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
       });
-  </script>
-  <script src="assets/js/main.js"></script>
+</script>
+<script src="assets/js/main.js"></script>
 </body>
-
 </html>
