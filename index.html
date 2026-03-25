@@ -343,26 +343,25 @@
               </div>
               </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
-        <div class="contact-content" data-aos="zoom-in">
-          <form id="contact-form">
-            <div class="form-group">
-              <input type="text" placeholder="Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-              <textarea placeholder="Message" required rows="5"></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-        </div>
-      </div>
+    
+    <!-- Declaration Section -->
+    <section id="declaration">
+      <h2>Declaration</h2>
+      <p>
+        I hereby declare that the information provided is true to the best of
+        my knowledge and belief.
+      </p>
+      <p>
+        Date:
+        <script>
+          var date = new Date();
+          var day = String(date.getDate()).padStart(2, "0");
+          var month = String(date.getMonth() + 1).padStart(2, "0"); // Month is 0-based, so we add 1
+          var year = date.getFullYear();
+          document.write(day + "-" + month + "-" + year);
+        </script>
+      </p>
+      <p>Place: Sector 50, Noida, Uttar Pradesh 201301</p>
     </section>
 
     <!-- Footer -->
